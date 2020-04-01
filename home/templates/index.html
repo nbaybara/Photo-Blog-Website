@@ -1,13 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>website</title>
-</head>
-<body>
-        <h1>Django site deneme</h1>
-    <p>
-        {{ text }}
-    </p>
-</body>
-</html>
+{% extends "homebase.html"%}
+
+{% block title %} İndex Sayfası {% endblock %}
+{% block keywords %} İndex Sayfası anahtar kelimeler {% endblock %}
+{% block description %} İndex Sayfası açıklama{% endblock %}
+
+{% block sidebar %}
+    {% include "sidebar.html" %}
+{% endblock %}
+{% block slider %}
+    {% include "slider.html" %}
+{% endblock %}
+{% block content %}
+    {% include "content.html" %}
+{% endblock %}
+
+
+
+
