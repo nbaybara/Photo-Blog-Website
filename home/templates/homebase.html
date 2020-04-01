@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>{% block title %}Photography Django{% endblock %}</title>
+    <meta namee="keywords" content="{% block keywords %} Anasayfa anahtar kelimeler{% endblock %}">
+    <meta namee="description" content="{% block description %} Anasayfa kısa açıklama    {% endblock %}">
+
+
+    <!-- Favicon -->
+     {% load static %}
+    <link rel="icon" href="{% static 'img/core-img/favicon.png' %}">
+
+    <!-- Stylesheet -->
+    {% load static %}
+    <link rel="stylesheet" href="style.css">
+
+{% block head %}{% endblock %}
+</head>
+{% include 'header.html' %}
+{% block slider %} {% endblock %}
+{% block sidebar %} {% endblock %}
+{% block content %} {% endblock %}
+{% block body %} {% endblock %}
+{% include 'footer.html ' %}
+{% block footer %} {% endblock %}
+
+<body>
+
+</body>
+</html>
