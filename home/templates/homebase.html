@@ -10,28 +10,23 @@
     <!-- Title -->
     <title>{% block title %}Photography Django{% endblock %}</title>
     <meta namee="keywords" content="{% block keywords %} Anasayfa anahtar kelimeler{% endblock %}">
-    <meta namee="description" content="{% block description %} Anasayfa kısa açıklama    {% endblock %}">
-
+    <meta namee="description" content="{% block description %} Anasayfa kısa açıklama {% endblock %}">
 
     <!-- Favicon -->
-     {% load static %}
     <link rel="icon" href="{% static 'img/core-img/favicon.png' %}">
 
     <!-- Stylesheet -->
     {% load static %}
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href=" {% static 'style.css'%}">
 
 {% block head %}{% endblock %}
 </head>
-{% include 'header.html' %}
-{% block slider %} {% endblock %}
-{% block sidebar %} {% endblock %}
-{% block content %} {% endblock %}
-{% block body %} {% endblock %}
-{% include 'footer.html ' %}
-{% block footer %} {% endblock %}
-
 <body>
-
+    {% include 'header.html' %}
+    {% block slider %} {% endblock %}
+    {% block sidebar %}  {% endblock %}
+    {% block content %} {% endblock %}
+     {% include 'footer.html' %}
+    {% block foot %} {% endblock %}
 </body>
 </html>
