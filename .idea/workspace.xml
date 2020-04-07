@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b6edde5e-d507-4c77-acae-c23a065727de" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/homebase.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/homebase.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/sidebar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/slider.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/slider.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/post/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/post/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +88,8 @@
       <workItem from="1585775465310" duration="4835000" />
       <workItem from="1585853026343" duration="1337000" />
       <workItem from="1585870009437" duration="645000" />
+      <workItem from="1585946306317" duration="346000" />
+      <workItem from="1586175982483" duration="5706000" />
     </task>
     <task id="LOCAL-00001" summary="Video6">
       <created>1585774996637</created>
@@ -105,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585775059922</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="end od 6th video">
+      <created>1585946519593</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1585946519593</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,25 +121,26 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Video6" />
     <MESSAGE value="eksik dosyalar" />
-    <option name="LAST_COMMIT_MESSAGE" value="eksik dosyalar" />
+    <MESSAGE value="end od 6th video" />
+    <option name="LAST_COMMIT_MESSAGE" value="end od 6th video" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="25" key="#Inspections" timestamp="1585772517912">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="25" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1585772517912" />
-    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1585775059028">
+    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1585946517123">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585775059028" />
+    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585946517123" />
     <state x="186" y="9" key="SettingsEditor" timestamp="1585775892870">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="186" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1585775892870" />
-    <state x="485" y="166" key="com.intellij.ide.util.TipDialog" timestamp="1585946454544">
+    <state x="485" y="166" key="com.intellij.ide.util.TipDialog" timestamp="1586176170134">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="485" y="166" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1585946454544" />
+    <state x="485" y="166" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586176170134" />
     <state x="494" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585774972210">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
