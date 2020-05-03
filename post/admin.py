@@ -15,9 +15,11 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class PostAdmin(admin.ModelAdmin):
-    list_display = ['title', 'category', 'price', 'amount', 'status']
+    list_display = ['title', 'category', 'price', 'amount', 'image_tag', 'status']
+    readonly_fields = ('image_tag',)
     list_filter = ['status', 'category']
     inlines = [PostImageInline]
+
 
 class ImagesAdmin(admin.ModelAdmin):
     list_display = ['title', 'post', 'image']
