@@ -1,0 +1,65 @@
+{% extends "homebase.html"%}
+{% block title %}Contact  {{ setting.company.title }} {% endblock %}
+{% block keywords %} {{ setting.description }} {% endblock %}
+{% block description %} {{ setting.keyword }}{% endblock %}
+
+{% block head %} <link rel='shortcut icon' type='image/x-icon' href='{{ setting.icon.url }}' />{% endblock %}
+
+
+
+{% block content %}
+       <!-- Breadcrumb Area Start -->
+    {% load static %}
+    <section class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url({% static 'img/bg-img/38.jpg'%});">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="breadcrumb-content text-center">
+                        <h2 class="page-title">Contact</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item"><a href="index.html"><i class="icon_house_alt"></i> Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Area End -->
+     <div class="contact-area section-padding-80-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <h2 class="contact-title mb-30">Let’s Work <br>Together</h2>
+                    {{ setting.contact |safe }}
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <!-- Contact Info -->
+                    <div class="contact-info mb-30">
+                        <p>Email</p>
+                        <a href="mailto:info.deercreative@gmail.com">info.deercreative@gmail.com</a>
+                    </div>
+                    <!-- Contact Info -->
+                    <div class="contact-info mb-30">
+                        <p>Call Us</p>
+                        <a href="#">+6511.188.888</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <!-- Contact Info -->
+                    <div class="contact-info mb-30">
+                        <p>Visit Us</p>
+                        <a href="#">60-49 Road 11378 New York</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Area End -->
+{% endblock %}
+
+
+
+
