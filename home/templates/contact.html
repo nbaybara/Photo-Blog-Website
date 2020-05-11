@@ -3,7 +3,23 @@
 {% block keywords %} {{ setting.description }} {% endblock %}
 {% block description %} {{ setting.keyword }}{% endblock %}
 
-{% block head %} <link rel='shortcut icon' type='image/x-icon' href='{{ setting.icon.url }}' />{% endblock %}
+{% block head %} <link rel='shortcut icon' type='image/x-icon' href='{{ setting.icon.url }}' />
+
+    {% load static %}
+    <link rel="stylesheet" href=" {% static 'contactTemplate/bootstrap.min.css' %}">
+    <!-- Slick -->
+	<link  rel="stylesheet" href="{% static 'contactTemplate/slick.css' %}" />
+    	<link  rel="stylesheet" href="{% static 'contactTemplate/style2.css' %}" />
+	<link  rel="stylesheet" href="{% static 'contactTemplate/slick-theme.css' %}" />
+
+	<!-- nouislider -->
+	<link  rel="stylesheet" href="{% static 'contactTemplate/nouislider.min.css'%}" />
+
+	<!-- Font Awesome Icon -->
+	<link rel="stylesheet" href="{% static 'contactTemplate/font-awesome.min.css' %}">
+
+
+{% endblock %}
 
 
 
@@ -27,38 +43,68 @@
             </div>
         </div>
     </section>
+
     <!-- Breadcrumb Area End -->
-     <div class="contact-area section-padding-80-50">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-lg-6">
-                    <h2 class="contact-title mb-30">Let’s Work <br>Together</h2>
+    <div id="breadcrumb">
+		<div class="container">
+			<ul class="breadcrumb">
+				<li><a href="#">Home</a></li>
+				<li class="active">Contact</li>
+			</ul>
+		</div>
+	</div>
+    <div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+
+                <div class="col-md-4">
+						<div class="billing-details">
+
+							<div class="section-title">
+								<h3 class="title">Contact Form</h3>
+							</div>
+
+                            {% if messages %}
+                                {% for message in messages %}
+                                    <div class="alert alert-{{ message.tags }}" role="alert">
+                                        {{ message }}
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+
+                            <form action="" method="post">
+                                {% csrf_token %}
+                                {{ form.as_p }}
+                                <input type="submit" value="Send Form">
+
+                            </form>
+
+
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="section-title">
+                            <h3 class="title">Contact Information</h3>
+                        </div>
                     {{ setting.contact |safe }}
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <!-- Contact Info -->
-                    <div class="contact-info mb-30">
-                        <p>Email</p>
-                        <a href="mailto:info.deercreative@gmail.com">info.deercreative@gmail.com</a>
+
                     </div>
-                    <!-- Contact Info -->
-                    <div class="contact-info mb-30">
-                        <p>Call Us</p>
-                        <a href="#">+6511.188.888</a>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <!-- Contact Info -->
-                    <div class="contact-info mb-30">
-                        <p>Visit Us</p>
-                        <a href="#">60-49 Road 11378 New York</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Contact Area End -->
+        </div> <!-- row -->
+    </div><!--cont-->
+    </div> <!-- sect->
+
+
+    {% load static %}
+    <script src="{% static 'contactTemplate/js/jquery.min.js' %}"></script>
+	<script src="{% static 'contactTemplate/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'contactTemplate/js/slick.min.js' %}"></script>
+	<script src="{% static 'contactTemplate/js/nouislider.min.js' %}"></script>
+	<script src="{% static 'contactTemplate/js/jquery.zoom.min.js' %}"></script>
+	<script src="{% static 'contactTemplate/js/main.js' %}"></script>
 {% endblock %}
+
 
 
 
