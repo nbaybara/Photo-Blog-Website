@@ -22,8 +22,8 @@ from home import views
 
 
 urlpatterns = [
-    path('blog/', views.blog, name='contact'),
-    path('gallery/', views.gallery, name='contact'),
+    path('blog/', views.blog, name='blog'),
+    path('gallery/', views.gallery, name='gallery'),
     path('contact/', views.contact, name='contact'),
     path('references/', views.references, name='references'),
     path('about/', views.about, name='about'),

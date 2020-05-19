@@ -1,4 +1,6 @@
 {% load static %}
+
+
 <!-- Header Area Start -->
     <header class="header-area">
         <!-- Main Header Start -->
@@ -26,24 +28,30 @@
                             <div class="classynav">
                                 <ul id="nav">
                                     <li class="active"><a href="/">Home</a></li>
-                                    <li><a href="#">Pages</a>
-                                        <ul class="dropdown">
-                                            <li><a href="/">- Home</a></li>
-                                            <li><a href="/about">- About</a></li>
-                                            <li><a href="/blog">- Blog</a></li>
-                                            <li><a href="/gallery">- Gallery</a></li>
-                                            <li><a href="/references">- References</a></li>
-                                            <li><a href="/contact">- Contact</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="/about">About</a></li>
-                                    <li><a href="/blog">Blog</a></li>
-                                    <li><a href="/gallery">Gallery</a></li>
+                                     <li><a href="/about">About</a></li>
+                                     <li><a href="/blog">Blog</a></li>
+                                     <li><a href="/gallery">Gallery</a></li>
                                     <li><a href="/references">References</a></li>
                                     <li><a href="/contact">Contact</a></li>
+                                    <li ><a href="#">Categories</a>
+                                                        {% load mptt_tags %}
+                                                         <ul class="dropdown">
+                                                        {% recursetree category %}
+                                                        <li><a href="/category/{{ node.slug }}" class="dropdown-toggle" {% if not node.is_leaf_node %} data-toggle="dropdown" aria-expanded="true" {% endif %}>{{ node.title }}</a></li>
+                                                            {% if not node.is_leaf_node %}
+                                                                <li>
+                                                                <ul class="dropdown">
+                                                                    <li><a href="/category/{{ node.slug }}">{{ children }}</a></li>
+                                                                </ul>
+                                                                </li>
+                                                            {% endif %}
+                                                            {% endrecursetree %}
+                                                        </ul>
+
+                                    </li>
+
                                 </ul>
                                 <!-- Search Icon -->
-                                <div class="search-icon" data-toggle="modal" data-target="#searchModal"><i class="ti-search"></i></div>
                             </div>
                             <!-- Nav End -->
                         </div>

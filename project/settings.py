@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'django.contrib.staticfiles',
+    'mptt',
 ]
 
 MIDDLEWARE = [
