@@ -17,9 +17,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
-
 from home import views
-
 
 urlpatterns = [
     path('blog/', views.blog, name='blog'),
@@ -32,6 +30,10 @@ urlpatterns = [
     path('post/', include('post.urls')),
     path('admin/', admin.site.urls),
     path('ckeditor/', include('ckeditor_uploader.urls')),
+    path('category/<int:id>/<slug:slug>/', views.category_posts,name='category_posts'),
+    path('post/<int:id>/<slug:slug>/', views.post_detail, name='post_detail'),
+    path('search/', views.post_search, name='post_search'),
+    path('search_auto/', views.post_search_auto, name='post_search_auto'),
 
 ]
 if settings.DEBUG:

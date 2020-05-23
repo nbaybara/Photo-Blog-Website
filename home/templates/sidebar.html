@@ -11,13 +11,12 @@
 
                         <div class="portfolio-menu text-center">
 
+                            {% load mptt_tags %}
                             <ul>
-                            <button class="btn active" data-filter="*">All</button>
-                            <button class="btn" data-filter=".human">Human</button>
-                            <button class="btn" data-filter=".nature">Nature</button>
-                            <button class="btn" data-filter=".country">Country</button>
-                            <button class="btn" data-filter=".video">Video</button>
+                             {% recursetree category %}
+                            <button class="btn active" data-filter="*" onclick=location.href="/category">{{ node.title }}</button>
 
+                            {% endrecursetree %}
                             </ul>
                         </div>
                     </div>

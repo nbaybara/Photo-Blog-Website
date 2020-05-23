@@ -4,18 +4,15 @@
         <div class="welcome-slides owl-carousel">
             <!-- Single Slide -->
             {% for rs in sliderdata %}
-            <div class="single-welcome-slide bg-img bg-overlay" >
-                <img  src="{{ rs.image.url }}">
+            <div class="single-welcome-slide bg-img bg-overlay"style="background: url({{rs.image.url}}) ;background-size: 100%;" >
                 <div class="container h-100">
-                    <div class="row h-100 align-items-center">
-                        <!-- Welcome Text -->
+                    <div class="row h-100 align-items-center"><!-- Welcome Text -->
                         <div class="col-12 col-lg-8 col-xl-6">
                             <div class="welcome-text">
-                                <h2 data-animation="bounceInDown" data-delay="900ms">{{ rs.title }} <br>I'm Jackson</h2>
-                                <p data-animation="bounceInDown" data-delay="500ms">I photograph very instinctively. I see how it is taken like that. I do not follow certain styles, philosophies or teachers.</p>
-                                <div class="hero-btn-group" data-animation="bounceInDown" data-delay="100ms">
-                                    <a href="#" class="btn alime-btn mb-3 mb-sm-0 mr-4">Get a Quote</a>
-                                    <a class="hero-mail-contact" href="mailto:hello.daisy@gmail.com">hello.daisy@gmail.com</a>
+                                <h2  data-delay="900ms">{{ rs.title }}</h2>
+                                <div class="hero-btn-group" data-animation="bounceInDown" data-delay="50ms">
+                                  <a class="hero-mail-contact" href="mailto:hello.alime@gmail.com">hello.alime@gmail.com</a>
+                                  <a href="/post/{{ rs.id }}/{{ rs.slug }}" class="primary-btn">Look at</a>
                                 </div>
                             </div>
                         </div>
@@ -28,4 +25,3 @@
 
         </div>
     </section>
-    <!-- Welcome Area End -->

@@ -5,74 +5,110 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-heading text-center">
-                        <h2>Follow Instagram</h2>
+                        <h2>Photo of the Day</h2>
                         <p>@quarantina_photographer</p>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Instagram Feed Area -->
+        <!-- Instagram Feed Area1 -->
         <div class="instragram-feed-area owl-carousel">
             <!-- Single Instagram Item -->
+            {% for rs in lastposts %}
             <div class="single-instagram-item">
-                <img src="{% static 'img/bg-img/11.jpg'%}" alt="">
+
+                <img src="{{ rs.image.url }}" alt="">
                 <div class="instagram-hover-content text-center d-flex align-items-center justify-content-center">
-                    <a href="#">
+                    <a href="/post/{{ rs.id }}/{{ rs.slug }}">
                         <i class="ti-instagram" aria-hidden="true"></i>
-                        <span>quarantina_photographer</span>
+                        <span>{{ rs.title }}</span>
                     </a>
+
                 </div>
+
+
             </div>
-            <!-- Single Instagram Item -->
-            <div class="single-instagram-item">
-                <img src="{% static 'img/bg-img/12.jpg'%}" alt="">
-                <div class="instagram-hover-content text-center d-flex align-items-center justify-content-center">
-                    <a href="#">
-                        <i class="ti-instagram" aria-hidden="true"></i>
-                        <span>quarantina_photographer</span>
-                    </a>
-                </div>
-            </div>
-            <!-- Single Instagram Item -->
-            <div class="single-instagram-item">
-                <img src="{% static 'img/bg-img/13.jpg'%}" alt="">
-                <div class="instagram-hover-content text-center d-flex align-items-center justify-content-center">
-                    <a href="#">
-                        <i class="ti-instagram" aria-hidden="true"></i>
-                        <span>quarantina_photographer</span>
-                    </a>
-                </div>
-            </div>
-            <!-- Single Instagram Item -->
-            <div class="single-instagram-item">
-                <img src="{% static 'img/bg-img/14.jpg'%}" alt="">
-                <div class="instagram-hover-content text-center d-flex align-items-center justify-content-center">
-                    <a href="#">
-                        <i class="ti-instagram" aria-hidden="true"></i>
-                        <span>quarantina_photographer</span>
-                    </a>
-                </div>
-            </div>
-            <!-- Single Instagram Item -->
-            <div class="single-instagram-item">
-                <img src="{% static 'img/bg-img/15.jpg'%}" alt="">
-                <div class="instagram-hover-content text-center d-flex align-items-center justify-content-center">
-                    <a href="#">
-                        <i class="ti-instagram" aria-hidden="true"></i>
-                        <span>quarantina_photographer</span>
-                    </a>
-                </div>
-            </div>
-            <!-- Single Instagram Item -->
-            <div class="single-instagram-item">
-                <img src="{% static 'img/bg-img/16.jpg'%}" alt="">
-                <div class="instagram-hover-content text-center d-flex align-items-center justify-content-center">
-                    <a href="#">
-                        <i class="ti-instagram" aria-hidden="true"></i>
-                        <span>quarantina_photographer</span>
-                    </a>
+            {% endfor %}
+        </div>
+
+    </section>
+<br><br>
+        <section class="follow-area clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading text-center">
+                        <h2>Latest Photo</h2>
+                        <p>@quarantina_photographer</p>
+                    </div>
                 </div>
             </div>
         </div>
+        <!-- Instagram Feed Area1 -->
+
+        <div class="instragram-feed-area owl-carousel">
+            <!-- Single Instagram Item -->
+            {% for rs in dayposts %}
+            <div class="single-instagram-item">
+
+                <img src="{{ rs.image.url }}" alt="">
+                <div class="instagram-hover-content text-center d-flex align-items-center justify-content-center">
+                    <a href="/post/{{ rs.id }}/{{ rs.slug }}">
+                        <i class="ti-instagram" aria-hidden="true"></i>
+                        <span>{{ rs.title }}</span>
+                    </a>
+
+                </div>
+
+            </div>
+            {% endfor %}
+
+        </div>
+
     </section>
+
+<br><br>
+
+ <section class="follow-area clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading text-center">
+                        <h2>Picked For you</h2>
+                        <p>@quarantina_photographer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Instagram Feed Area1 -->
+        <div class="instragram-feed-area owl-carousel">
+
+            <!-- Single Instagram Item -->
+            {% for rs in randposts %}
+            <div class="single-instagram-item">
+
+                <img  src="{{ rs.image.url }}">
+                <div class="instagram-hover-content text-center d-flex align-items-center justify-content-center">
+                    <a href="/category/{{ rs.id}}/{{ rs.title }}">
+                        <i class="ti-instagram" aria-hidden="true"></i>
+                        <span>{{ rs.title }}</span>
+                    </a>
+
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </section>
+<br><br>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="section-heading text-center">
+                                    <h2>Follow Instagram</h2>
+                                    <p>@quarantina_photographer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
     <!-- Follow Area End -->

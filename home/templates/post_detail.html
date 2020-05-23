@@ -1,0 +1,289 @@
+{% extends "homebase.html"%}
+{% block title %}  {{ post.title}} {% endblock %}
+{% block keywords %} {{ post.keyword }} {% endblock %}
+{% block description %} {{ post.description }}{% endblock %}
+{% block head %} <link rel='shortcut icon' type='image/x-icon' href='{{ setting.icon.url }}' />
+{% load static %}
+    	<link href="https://fonts.googleapis.com/css?family=Hind:400,700" rel="stylesheet">
+
+
+{% endblock %}
+{% block content %}
+
+     <!-- About Us Area Start -->
+       <!-- Breadcrumb Area Start -->
+    <!-- Breadcrumb Area Start -->
+    <section class="breadcrumb-area blog bg-img bg-overlay jarallax" style="background: url({{post.image.url}})no-repeat; background-size: 100%;">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+
+                    <div class="breadcrumb-content text-center">
+                        <a href="/category/{{ post.category_id }}/{{ post.category.slug }}" class="btn post-catagory">{{post.category}}</a>
+                        <h2 class="page-title">{{ post.title }}</h2>
+                        <div class="post-meta">
+                            <a href="#" class="post-author">{{ post.category}}</a>
+                            <a href="#" class="post-date">July 15, 2019</a>
+                            <a href="#" class="post-comments">No Comments</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Details Area Start -->
+    <div class="alime--blog-area section-padding-80">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10">
+                    <!-- Blog Details Text -->
+                    <div class="blog-details-text">
+                        <p>{{ post.detail |safe }}</p>
+                          <!-- Blockquote -->
+                        <blockquote class="alime-blockquote">
+                            <h4>Thank you for shooting Jared's Bar Mitzvaptured the magic of the day.</h4>
+                            <h6>- Ron &amp; Nina B</h6>
+                        </blockquote>
+
+                        <div class="my-5">
+                            <div class="row">
+                                <div class="col-12 col-lg-8">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6">
+                                            <img class="mb-10" src={{ post.image.url }} alt="">
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <img class="mb-10" src={{ post.image.url }} alt="">
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <img class="mb-10" src={{ post.image.url }} alt="">
+                                </div>
+                            </div>
+                        </div>
+
+
+                    <!-- Post Author Area -->
+                    <div class="post-author-area mt-50 d-flex align-items-center justify-content-between">
+                        <ul class="popular-tags">
+                            <li><a class="btn badges-btn" href="#">CAMERA</a></li>
+                            <li><a class="btn badges-btn" href="#">PHOTOGRAHY</a></li>
+                            <li><a class="btn badges-btn" href="#">TIPS</a></li>
+                        </ul>
+
+                        <!-- Share Info -->
+                        <div class="post-social-info d-flex align-items-center">
+                            <p>Share:</p>
+                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Blog Details Area End -->
+     <!-- Related News Area Start -->
+    <div class="related-news-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading">
+                        <h2>Recommended For You</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Single Blog Area -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-post-area">
+                        <!-- Post Thumbnail -->
+                        <a href="#" class="post-thumbnail"><img src="img/bg-img/52.jpg" alt=""></a>
+                        <!-- Post Catagory -->
+                        <a href="#" class="btn post-catagory">Camera</a>
+                        <!-- Post Conetent -->
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <a href="#">May 19, 2019</a>
+                                <a href="#">3 Comment</a>
+                            </div>
+                            <a href="#" class="post-title">The Female Body Shape Men Find</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Blog Area -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-post-area">
+                        <!-- Post Thumbnail -->
+                        <a href="#" class="post-thumbnail"><img src="img/bg-img/53.jpg" alt=""></a>
+                        <!-- Post Catagory -->
+                        <a href="#" class="btn post-catagory">Country</a>
+                        <!-- Post Conetent -->
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <a href="#">May 19, 2019</a>
+                                <a href="#">3 Comment</a>
+                            </div>
+                            <a href="#" class="post-title">Vietnam's largest art community</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Blog Area -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-post-area">
+                        <!-- Post Thumbnail -->
+                        <a href="#" class="post-thumbnail"><img src="img/bg-img/54.jpg" alt=""></a>
+                        <!-- Post Catagory -->
+                        <a href="#" class="btn post-catagory">Camera</a>
+                        <!-- Post Conetent -->
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <a href="#">May 19, 2019</a>
+                                <a href="#">3 Comment</a>
+                            </div>
+                            <a href="#" class="post-title">Photo awards of the year</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Blog Area -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-post-area">
+                        <!-- Post Thumbnail -->
+                        <a href="#" class="post-thumbnail"><img src="img/bg-img/55.jpg" alt=""></a>
+                        <!-- Post Catagory -->
+                        <a href="#" class="btn post-catagory">Tips</a>
+                        <!-- Post Conetent -->
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <a href="#">May 19, 2019</a>
+                                <a href="#">3 Comment</a>
+                            </div>
+                            <a href="#" class="post-title">The Female Body Shape Men Find</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-top mt-5"></div>
+        </div>
+    </div>
+    <!-- Related News Area End -->
+        <!-- Comment Area Start -->
+    <div class="comment-area section-padding-80">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <!-- Comments Area -->
+                    <div class="comment_area clearfix">
+
+                        <ol>
+                            <!-- Single Comment Area -->
+
+                            <li class="single_comment_area">
+
+                                <!-- Comment Content -->
+                                <div class="comment-content d-flex">
+                                    <!-- Comment Author -->
+
+                                    <div class="comment-author">
+                                        <img src="img/bg-img/34.jpg" alt="author">
+                                    </div>
+                                    <!-- Comment Meta -->
+                                    <div class="comment-meta">
+                                    {% for rs in comments %}
+                                        <a href="#" class="post-date"></a>
+                                        <h5>{{ rs.user.first_name }}</h5>
+
+                                        <div class="review-rating pull-left">
+									    <i class="fa fa-star{% if rs.rate < 1 %}-o empty{% endif %}"></i>
+									    <i class="fa fa-star{% if rs.rate < 2 %}-o empty{% endif %}"></i>
+									    <i class="fa fa-star{% if rs.rate < 3 %}-o empty{% endif %}"></i>
+									    <i class="fa fa-star{% if rs.rate < 4 %}-o empty{% endif %}"></i>
+									    <i class="fa fa-star{% if rs.rate < 5 %}-o empty{% endif %}"></i>
+                                        </div>
+                                        <div class="review-body">
+                                            <b>{{ rs.subject }}</b>
+                                            <p>{{ rs.comment }}</p>
+                                        </div>
+                                    {% endfor %}
+                                    </div>
+                                </div>
+
+                            </li>
+
+                        </ol>
+                    </div>
+
+                    <!-- Leave A Reply -->
+                    <div class="alime-contact-form mt-50">
+                            <div class="col-12">
+                                <h4 class="mb-30">Leave A Comment</h4>
+                                    {% if messages %}
+                                        {% for message in messages %}
+                                            <div class="alert alert-{{ message.tags }}"role="alert">
+                                                {{ message }}
+                                            </div>
+                                        {% endfor %}
+                                    {% endif %}
+                                </div>
+                        <!-- Form -->
+                        <form action="/post/addcomment/{{ post.id }}" method="post">
+                            {% csrf_token %} <!--manuel old için -->
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <input type="text" name="name" class="form-control mb-30" placeholder="Your Name">
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" name="subject" class="form-control mb-30" placeholder="Subject">
+                                </div>
+                                <div class="col-12">
+                                <input type="text" name="comment" class="form-control mb-30" placeholder="Comment">
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-rating">
+                                        <h5 class="text-uppercase">Your Rating</h5>
+                                        <div class="stars">
+                                            <input type="radio" id="star5" name="rate" value="5"/><label for="star5"></label>
+                                            <input type="radio" id="star4" name="rate" value="4"/><label for="star4"></label>
+                                            <input type="radio" id="star3" name="rate" value="3"/><label for="star3"></label>
+                                            <input type="radio" id="star2" name="rate" value="2"/><label for="star2"></label>
+                                            <input type="radio" id="star1" name="rate" value="1"/><label for="star1"></label>
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                {% if user.id is not None %}
+                                <div class="col-12">
+                                    <button type="submit" class="btn alime-btn btn-2 mt-15">Send Comment</button>
+                                {% else %}
+                                    LOGİN FOR A COMMENT!
+                                </div>
+                                {% endif %}
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Comment Area End -->
+
+{% endblock %}
+
+
+
+

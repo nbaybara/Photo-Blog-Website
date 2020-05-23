@@ -1,0 +1,69 @@
+{% extends "homebase.html"%}
+{% block title %}  {{ setting.title }} {% endblock %}
+{% block keywords %} {{ setting.description }} {% endblock %}
+{% block description %} {{ setting.keyword }}{% endblock %}
+
+{% block head %} <link rel='shortcut icon' type='image/x-icon' href='{{ setting.icon.url }}' />{% endblock %}
+<!-- jQuery !-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"> </script>
+<!-- jQuery UI !-->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+{% block content %}
+     {% load static %}
+    <section class="breadcrumb-area bg-img bg-overlay jarallax">
+        <img src={{ post.image.url }}>
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="breadcrumb-content text-center">
+                        <h2 class="page-title">Contact</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item"><a href="index.html"><i class="icon_house_alt"></i> Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <table cellpadding="3" width="1200">
+                    <tr>
+                        <th>Image</th>
+                         <th>Post Name</th>
+                        <th>Description</th>
+                    </tr>
+                    {% for rs in post %}
+                        <tr>
+                        <td><a href="/post/{{ rs.id }}/{{ rs.slug }}" style="" alt=""><img src="{{ rs.image.url }}"></a> </td>
+                         <td><a href="/post/{{ rs.id }}/{{ rs.slug }}" style="" alt="">{{ rs.title }}</a> </td>
+                        <td><a href="/category/{{ rs.category.id }}/{{ rs.category.slug }}" style="" alt="">{{ rs.category }}</a> </td>
+
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

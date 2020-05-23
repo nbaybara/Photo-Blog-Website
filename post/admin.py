@@ -1,7 +1,7 @@
 from django.contrib import admin
 from mptt.admin import DraggableMPTTAdmin
 
-from post.models import Category, Post, Images
+from post.models import Category, Post, Images, Comment
 
 
 class PostImageInline(admin.TabularInline):
@@ -22,7 +22,7 @@ class PostAdmin(admin.ModelAdmin):
 
 
 class ImagesAdmin(admin.ModelAdmin):
-    list_display = ['title', 'post', 'image']
+    list_display = ['title', 'post', 'image_tag']
 
 
 class CategoryAdmin2(DraggableMPTTAdmin):
@@ -60,7 +60,12 @@ class CategoryAdmin2(DraggableMPTTAdmin):
 
     related_posts_cumulative_count.short_description = 'Related posts (in tree)'
 
+class commentAdmin(admin.ModelAdmin):
+    list_display = ['subject','comment','post','user','status']
+    list_filter = ['status']
+
 
 admin.site.register(Category, CategoryAdmin2)
 admin.site.register(Post, PostAdmin)
 admin.site.register(Images, ImagesAdmin)
+admin.site.register(Comment,commentAdmin)

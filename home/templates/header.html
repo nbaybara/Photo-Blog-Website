@@ -1,6 +1,30 @@
 {% load static %}
 
+    	<link  rel="stylesheet" href="{% static 'contactTemplate/style2.css' %}" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"> </script>
+<!-- jQuery UI !-->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 
+
+<script>
+
+              $(function() {
+                $("#query").autocomplete({
+                  source: "/search_auto/",
+                  select: function (event, ui) { //item selected
+                    AutoCompleteSelectHandler(event, ui)
+                  },
+                  minLength: 2,
+                });
+              });
+
+              function AutoCompleteSelectHandler(event, ui)
+              {
+                var selectedObj = ui.item;
+              }
+
+</script>
 <!-- Header Area Start -->
     <header class="header-area">
         <!-- Main Header Start -->
@@ -27,31 +51,56 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul id="nav">
+
+                                <!-- Search Icon -->
+                                <li><div class="header-search" sty>
+                                    <form action="/search/"method="post">
+                                        {% csrf_token %}
+                                        <input name="query" class="input search-input" type="text" placeholder="Keyword" style="color: white;  border: 1px solid grey;">
+                                        {% load mptt_tags %}
+                                        <select class="input search-categories">
+
+                                            <option value="0"style="background-color: white;">All Categories</option>
+                                                                            {% recursetree category %}
+                                                                            {% if node.is_leaf_node %}
+                                                                                <option value="{{ node.id }}">{{ node.title }}</option>
+                                                                            {% endif %}
+                                                                                {% if not node.is_leaf_node %}
+                                                                                    <optgroup label="{{ node.title }}">
+                                                                                    {{ children }}
+                                                                                    </optgroup>
+                                                                                {% endif %}
+                                                                        {% endrecursetree %}
+                                        </select>
+                                        <button class="search-btn" style="background: white;">
+                                        <i class="fa fa-arrow-circle-right" style=" box-sizing: border-box; border: 1px solid grey;" ></i> </button>
+                                        </form>
+                                </div></li>
                                     <li class="active"><a href="/">Home</a></li>
-                                     <li><a href="/about">About</a></li>
-                                     <li><a href="/blog">Blog</a></li>
-                                     <li><a href="/gallery">Gallery</a></li>
-                                    <li><a href="/references">References</a></li>
+                                    <li><a href="/about">About</a></li>
+                                    <li><a href="/gallery">Gallery</a></li>
                                     <li><a href="/contact">Contact</a></li>
                                     <li ><a href="#">Categories</a>
                                                         {% load mptt_tags %}
                                                          <ul class="dropdown">
                                                         {% recursetree category %}
-                                                        <li><a href="/category/{{ node.slug }}" class="dropdown-toggle" {% if not node.is_leaf_node %} data-toggle="dropdown" aria-expanded="true" {% endif %}>{{ node.title }}</a></li>
+                                                        <li><a href="/category/{{ node.id }}/{{ node.slug }}" class="dropdown-toggle"
+                                                                {% if not node.is_leaf_node %} data-toggle="dropdown" aria-expanded="true" {% endif %}>
+                                                            {{ node.title }}
+                                                                </a></li>
                                                             {% if not node.is_leaf_node %}
                                                                 <li>
                                                                 <ul class="dropdown">
-                                                                    <li><a href="/category/{{ node.slug }}">{{ children }}</a></li>
+                                                                    <li><a href="">{{ children }}</a></li>
                                                                 </ul>
                                                                 </li>
                                                             {% endif %}
                                                             {% endrecursetree %}
                                                         </ul>
 
-                                    </li>
-
+                                     </li>
                                 </ul>
-                                <!-- Search Icon -->
+
                             </div>
                             <!-- Nav End -->
                         </div>

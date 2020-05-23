@@ -308,8 +308,9 @@ textarea.input {
 ===========================================================*/
 
 #header {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height: min-content;
 }
 
 /*----------------------------*\
@@ -317,8 +318,8 @@ textarea.input {
 \*----------------------------*/
 
 #top-header {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 0px;
+  padding-bottom: 0px;
   border-bottom: 1px solid #DADADA;
 }
 
@@ -327,7 +328,7 @@ textarea.input {
 }
 
 .header-top-links>li+li {
-  margin-left: 15px;
+  margin-left: 0px;
 }
 
 .header-top-links>li>a {
@@ -366,9 +367,14 @@ textarea.input {
 .header-search>form .search-input {
   padding-left: 150px;
   padding-right: 45px;
+  background: white;
+   left: 0px;
+  top: 0px;
+  width: 135px;
 }
 
 .header-search>form .search-categories {
+  background: white;
   position: absolute;
   left: 0px;
   top: 0px;
@@ -380,7 +386,7 @@ textarea.input {
   top: 0px;
   right: 0px;
   width: 40px;
-  height: 40px;
+  height: 38px;
   background-color: transparent;
   border: none;
 }
