@@ -1,31 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b6edde5e-d507-4c77-acae-c23a065727de" name="Default Changelist" comment="15-full">
-      <change afterPath="$PROJECT_DIR$/home/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/templates/post_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/templates/post_search.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/templates/posts.html" afterDir="false" />
+    <list default="true" id="b6edde5e-d507-4c77-acae-c23a065727de" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/home/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/templates/signup.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/contactTemplate/style2.css" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/contactTemplate/style2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/static/contactTemplate/style2.css" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/contactTemplate/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/gallery.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/homebase.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/homebase.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/sidebar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/slider.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/slider.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/post_search.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/post_search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/post/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/post/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/post/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/post/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/post/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/post/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/images/18.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,17 +71,59 @@
     <property name="settings.editor.selected.configurable" value="discord-application" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\nsbay\Django\project\home\static\contactTemplate" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\nsbay\Django\project\home\templates" />
       <recent name="C:\Users\nsbay\Django\project\home" />
       <recent name="C:\Users\nsbay\Django\project\home\static" />
       <recent name="C:\Users\nsbay\Django\project\post" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nsbay\Django\project\home\static\contactTemplate" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Django tests.Test: home">
+    <configuration name="Test: home" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="home" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/home" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/home/views.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="project" type="Python.DjangoServer" factoryName="Django server">
       <module name="project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -114,6 +148,12 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Django tests.Test: home" />
+        <item itemvalue="Python.views" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -171,7 +211,7 @@
       <workItem from="1590024459023" duration="7974000" />
       <workItem from="1590050099034" duration="15191000" />
       <workItem from="1590184478609" duration="11983000" />
-      <workItem from="1590243225903" duration="1405000" />
+      <workItem from="1590243225903" duration="23150000" />
     </task>
     <task id="LOCAL-00001" summary="Video6">
       <created>1585774996637</created>
@@ -236,7 +276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589888462468</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Kategori, alt ürünler, detay arama butonu">
+      <created>1590244703405</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1590244703405</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,7 +308,8 @@
     <MESSAGE value="About-blog-gallery-references" />
     <MESSAGE value="contact sayfası" />
     <MESSAGE value="15-full" />
-    <option name="LAST_COMMIT_MESSAGE" value="15-full" />
+    <MESSAGE value="Kategori, alt ürünler, detay arama butonu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kategori, alt ürünler, detay arama butonu" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="25" key="#Deployment" timestamp="1589885714092">
@@ -276,10 +324,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="465" y="174" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1589053449436" />
-    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1589941314522">
+    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1590244696186">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1589941314522" />
+    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1590244696186" />
     <state x="92" y="92" width="1182" height="544" maximized="true" key="DiffContextDialog" timestamp="1589885904963">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -288,38 +336,38 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="122" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1588549267098" />
-    <state width="1323" height="247" key="GridCell.Tab.0.bottom" timestamp="1590032457040">
+    <state width="1323" height="466" key="GridCell.Tab.0.bottom" timestamp="1590326036636">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="247" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590032457040" />
-    <state width="1323" height="247" key="GridCell.Tab.0.center" timestamp="1590032457035">
+    <state width="1323" height="466" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590326036636" />
+    <state width="1323" height="466" key="GridCell.Tab.0.center" timestamp="1590326036635">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="247" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590032457035" />
-    <state width="1323" height="247" key="GridCell.Tab.0.left" timestamp="1590032457035">
+    <state width="1323" height="466" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590326036635" />
+    <state width="1323" height="466" key="GridCell.Tab.0.left" timestamp="1590326036635">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="247" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590032457035" />
-    <state width="1323" height="247" key="GridCell.Tab.0.right" timestamp="1590032457035">
+    <state width="1323" height="466" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590326036635" />
+    <state width="1323" height="466" key="GridCell.Tab.0.right" timestamp="1590326036635">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="247" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590032457035" />
-    <state width="1323" height="247" key="GridCell.Tab.1.bottom" timestamp="1590032457040">
+    <state width="1323" height="466" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590326036635" />
+    <state width="1323" height="247" key="GridCell.Tab.1.bottom" timestamp="1590247046903">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="247" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590032457040" />
-    <state width="1323" height="247" key="GridCell.Tab.1.center" timestamp="1590032457040">
+    <state width="1323" height="247" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590247046903" />
+    <state width="1323" height="247" key="GridCell.Tab.1.center" timestamp="1590247046903">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="247" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1590032457040" />
-    <state width="1323" height="247" key="GridCell.Tab.1.left" timestamp="1590032457040">
+    <state width="1323" height="247" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1590247046903" />
+    <state width="1323" height="247" key="GridCell.Tab.1.left" timestamp="1590247046903">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="247" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1590032457040" />
-    <state width="1323" height="247" key="GridCell.Tab.1.right" timestamp="1590032457040">
+    <state width="1323" height="247" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1590247046903" />
+    <state width="1323" height="247" key="GridCell.Tab.1.right" timestamp="1590247046903">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="247" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1590032457040" />
+    <state width="1323" height="247" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1590247046903" />
     <state x="186" y="9" key="SettingsEditor" timestamp="1589853511489">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -336,6 +384,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="494" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1588549799517" />
+    <state x="247" y="103" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1590326034215">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="247" y="103" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1366.728@0.0.1366.728" timestamp="1590326034215" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1590333890360">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1590333890360" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -347,5 +403,9 @@
         </breakpoint>
       </default-breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/project$views.coverage" NAME="views Coverage Results" MODIFIED="1590325989639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/home" />
+    <SUITE FILE_PATH="coverage/project$Test__home.coverage" NAME="Test: home Coverage Results" MODIFIED="1590326019555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

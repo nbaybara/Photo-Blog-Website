@@ -1,12 +1,13 @@
 import json
 
+from django.contrib.auth import logout, authenticate, login
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 
 # Create your views here.
 from django.contrib import messages
 
-from home.forms import SearchForm
+from home.forms import SearchForm, SignUpForm
 from home.models import Setting, ContactFormMessage, ContactFormu
 from post.models import Post, Category, Comment, Images
 
@@ -106,17 +107,22 @@ def post_detail(request, id, slug):
 
 def post_search(request):
     if request.method == 'POST':
-        form=SearchForm(request.POST)
+        form = SearchForm(request.POST)
         if form.is_valid():
             category = Category.objects.all()
+
             query=form.cleaned_data['query']
             catid = form.cleaned_data['catid']
-            post=Post.objects.filter(title__icontains=query) #Select *from product like%query
+            if catid==0:
+                post=Post.objects.filter(title__icontains="query")
+            else:
+                post=Post.objects.filter(title__icontains=query,category_id=catid)
+            #post=Post.objects.filter(title__icontains=query) #Select *from product like%query
             context = {'post':post,
                        'category':category,}
             return render(request,'post_search.html',context)
 
-    return  HttpResponseRedirect('/')
+    return HttpResponseRedirect('/')
 
 
 def post_search_auto(request):
@@ -134,4 +140,44 @@ def post_search_auto(request):
             data = 'fail'
         mimetype = 'application/json'
         return HttpResponse(data, mimetype)
+
+def logout_view(request):
+    logout(request)
+    return HttpResponseRedirect('/')
+
+def login_view(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request,user)
+            return HttpResponseRedirect('/')
+        else:
+            messages.success(request, "Login failed.")
+            return HttpResponseRedirect('/login')
+
+
+    category = Category.objects.all()
+    context = {
+                'category': category, }
+    return render(request, 'login.html', context)
+
+def signup_view(request):
+    if request.method == 'POST':
+        form=SignUpForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = request.POST['username']
+            password = request.POST['password1']
+            user = authenticate(request, username=username, password=password)
+            login(request,user)
+        return HttpResponseRedirect('/')
+    category = Category.objects.all()
+    form=SignUpForm()
+    context = {
+        'category': category,
+        'form' : form,
+    }
+    return render(request, 'signup.html', context)
 

@@ -607,15 +607,15 @@ textarea.input {
   visibility: visible;
 }
 
-/*-- Default Dropdown --*/
+/*-- De-carult Dropdown --*/
 
-.dropdown.default-dropdown>.custom-menu {
-  border-top: 2px solid #F8694A;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(15px);
-  -ms-transform: translateX(-50%) translateY(15px);
-  transform: translateX(-50%) translateY(15px);
-}
+  .dropdown.default-dropdown>.custom-menu {
+    border-top: 2px solid #F8694A;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(15px);
+    -ms-transform: translateX(-50%) translateY(15px);
+    transform: translateX(-50%) translateY(15px);
+  }
 
 .dropdown.default-dropdown.open>.custom-menu {
   -webkit-transform: translateX(-50%) translateY(0px);

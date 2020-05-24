@@ -9,7 +9,7 @@
     <link rel="stylesheet" href=" {% static 'contactTemplate/bootstrap.min.css' %}">
     <!-- Slick -->
 	<link  rel="stylesheet" href="{% static 'contactTemplate/slick.css' %}" />
-    	<link  rel="stylesheet" href="{% static 'contactTemplate/style2.css' %}" />
+    	<link  rel="stylesheet" href="{% static 'contactTemplate/style.css' %}" />
 	<link  rel="stylesheet" href="{% static 'contactTemplate/slick-theme.css' %}" />
 
 	<!-- nouislider -->
@@ -20,7 +20,10 @@
 
 
 {% endblock %}
-
+<body>
+{% include 'footer.html' %}
+    {% block foot %} {% endblock %}
+</body>
 
 
 {% block content %}
