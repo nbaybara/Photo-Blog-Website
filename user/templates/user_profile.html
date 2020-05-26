@@ -1,0 +1,126 @@
+{% extends "homebase.html" %}
+
+{% block title %}Contact  {{ setting.company.title }} {% endblock %}
+{% block keywords %} {{ setting.description }} {% endblock %}
+{% block description %} {{ setting.keyword }}{% endblock %}
+
+{% block head %} <link rel='shortcut icon' type='image/x-icon' href='{{ setting.icon.url }}' />
+
+    {% load static %}
+    <link rel="stylesheet" href=" {% static 'contactTemplate/bootstrap.min.css' %}">
+	<link  rel="stylesheet" href="{% static 'contactTemplate/slick.css' %}" />
+    <link  rel="stylesheet" href="{% static 'contactTemplate/style.css' %}" />
+	<link  rel="stylesheet" href="{% static 'contactTemplate/slick-theme.css' %}" />
+	<link  rel="stylesheet" href="{% static 'contactTemplate/nouislider.min.css'%}" />
+	<link rel="stylesheet" href="{% static 'contactTemplate/font-awesome.min.css' %}">
+
+{% endblock %}
+
+{% load static %}
+
+{% block content %}
+    <!-- Breadcrumb Area Start -->
+        <!-- Breadcrumb Area Start -->
+
+
+  <section class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url({% static 'img/bg-img/38.jpg'%});">
+        <div class="container h-100">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="breadcrumb-content text-center">
+                        <h2 class="page-title"> Login</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item"><a href="index.html"><i class="icon_house_alt"></i> Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Blog</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+   <br>
+    <br>
+
+    <!-- Breadcrumb Area End -->
+    <div id="breadcrumb">
+		<div class="container">
+			<ul class="breadcrumb">
+				<li><a href="#">Home</a></li>
+				<li class="active">Contact</li>
+			</ul>
+		</div>
+	</div>
+    <div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+
+                <div class="col-md-3">
+						<div class="billing-details">
+                            {% include "user_panel.html" %}
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="section-title">
+                            <h3 class="title">User Information</h3>
+                        </div>
+                            <table class="shopping-cart-table table">
+
+									<tr>
+                                        <th class="text-left">
+                                        <td class="size: 50%"><img src="{{ profile.image.url }}" alt="" STYLE="width: auto;"></td>
+                                    </tr>
+                                    <tr>
+                                        </th>
+										<th class="text-left">Name Surname</th>
+                                        <td class="text-left">{{profile.user_name}}</td>
+                                    </tr>
+                                    <tr>
+										<th class="text-left">Email</th>
+                                        <td class="text-left">{{profile.user.email}}</td>
+                                    </tr>
+                                    <tr>
+										<th class="text-left">Address</th>
+										<td class="text-left">{{profile.address}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-left">Phone</th>
+                                        <td class="text-left">{{profile.phone}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-left">Country</th>
+										<td class="text-left">{{profile.country}}</td>
+                                     </tr>
+                                    <tr>
+                                        <th class="text-left">City</th>
+										<td class="text-left">{{profile.city}}</td>
+									</tr>
+                                    <tr></tr>
+
+                            </table>
+                    </div>
+        </div> <!-- row -->
+    </div><!--cont-->
+    </div> <!-- sect->
+
+
+ {% load static %}
+
+
+
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+    <script src="{% static 'js/alime.bundle.js'%} "></script>
+
+    <script src="{% static 'js/default-assets/active.js'%}"></script>
+{% endblock %}
+
+
+
+
+

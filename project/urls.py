@@ -20,23 +20,25 @@ from django.urls import path, include
 from home import views
 
 urlpatterns = [
-    path('blog/', views.blog, name='blog'),
-    path('gallery/', views.gallery, name='gallery'),
-    path('contact/', views.contact, name='contact'),
-    path('references/', views.references, name='references'),
-    path('about/', views.about, name='about'),
-    path('', include('home.urls')),
     path('home', include('home.urls')),
     path('post/', include('post.urls')),
+    path('', include('home.urls')),
+    path('user', include('user.urls')),
     path('admin/', admin.site.urls),
+    path('blog/', views.blog, name='blog'),
     path('ckeditor/', include('ckeditor_uploader.urls')),
-    path('category/<int:id>/<slug:slug>/', views.category_posts,name='category_posts'),
-    path('post/<int:id>/<slug:slug>/', views.post_detail, name='post_detail'),
+    path('gallery/', views.gallery, name='gallery'),
+    path('contact/', views.contact, name='contact'),
+    path('about/', views.about, name='about'),
+    path('references/', views.references, name='references'),
     path('search/', views.post_search, name='post_search'),
-    path('search_auto/', views.post_search_auto, name='post_search_auto'),
     path('logout/', views.logout_view, name='logout_view'),
     path('login/', views.login_view, name='login_view'),
     path('signup/', views.signup_view, name='signup_view'),
+    path('category/<int:id>/<slug:slug>/', views.category_posts, name='category_posts'),
+    path('post/<int:id>/<slug:slug>/', views.post_detail, name='post_detail'),
+    path('content/<int:id>/<slug:slug>/', views.content_detail, name='content_detail'),
+    path('search_auto/', views.post_search_auto, name='post_search_auto'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

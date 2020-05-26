@@ -85,6 +85,8 @@ class Images(models.Model):
         else:
             return 'No Image Found'
 
+    image_tag.short_description = 'Image' #bozulursa sil dene
+
 
 class  Comment(models.Model):
     STATUS = (

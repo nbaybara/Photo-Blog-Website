@@ -105,6 +105,17 @@ def post_detail(request, id, slug):
                }
     return render(request, 'post_detail.html', context)
 
+def content_detail(request, id, slug):
+    category = Category.objects.all()
+
+    post=Post.objects.filter(category_id=id)
+    link='/post/'+str(post[0].id)+'/'+post[0].slug
+    context = {'category': category,
+               'post': post,
+
+               }
+    return HttpResponseRedirect(link)
+
 def post_search(request):
     if request.method == 'POST':
         form = SearchForm(request.POST)

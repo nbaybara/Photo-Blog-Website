@@ -31,27 +31,27 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                              <ul id="nav">
-
-                                <!-- Search Icon -->
-
+                                 <!-- Search Icon -->
+                                    {% load mptt_tags %}
                                     <li ><a href="#">Categories</a>
-                                                         {% load mptt_tags %}
-                                                         <ul class="dropdown">
-                                                        {% recursetree category %}
-                                                        <li><a href="/category/{{ node.id }}/{{ node.slug }}" class="dropdown-toggle"
-                                                                {% if not node.is_leaf_node %} data-toggle="dropdown" aria-expanded="true" {% endif %}>
+                                        <ul class="dropdown ">
+                                        {% recursetree category %}
+                                              <li class="">
+                                                  <a href="/content/{{ node.id }}/{{ node.slug }}" class="dropdown-toggle"
+                                                          {% if not node.is_leaf_node %} data-toggle="list-link" aria-expanded="true" {% endif %}>
                                                             {{ node.title }}
-                                                                </a></li>
-                                                            {% if not node.is_leaf_node %}
-                                                                <li>
-                                                                <ul class="dropdown">
-                                                                    <li><a href="">{{ children }}</a></li>
-                                                                </ul>
-                                                                </li>
-                                                            {% endif %}
-                                                            {% endrecursetree %}
-                                                        </ul>
+                                                  </a>
+                                                           {% if not node.is_leaf_node %}
 
+                                                                 <ul class="dropdown">
+                                                                  <li><a href="#">{{ children }}</a></li>
+                                                                 </ul>
+
+                                                            {% endif %}
+
+                                              </li>
+                                            {% endrecursetree %}
+                                        </ul>
                                     </li>
                                     <li class="active"><a href="/">Home</a></li>
                                     <li><a href="/about">About</a></li>
@@ -78,11 +78,7 @@
                                         </ul>
                                     </li>
 							<!-- /Account -->
-
-
                              </ul>
-
-
                             </div>
                             <!-- Nav End -->
                         </div>
