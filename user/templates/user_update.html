@@ -69,46 +69,23 @@
                         <div class="section-title">
                             <h3 class="title">User Information</h3>
                         </div>
-                            <table class="shopping-cart-table table">
+                        <div class="content-section">
+                            <div class="media">
+                                <img src="{{ user.userprofile.image.url }}"
+                                     style="height:auto; width: auto;border-radius: 45px">
+                            </div>
+                            <form method="POST" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <fieldset class="form-group">
+                                    {{ user_form.as_p }}
+                                    {{ profile_form.as_p }}
+                                </fieldset>
+                                <div class="form-group">
+                                    <button class="btn btn-outline-info" type="submit">Update</button>
+                                </div>
+                            </form>
+                        </div>
 
-									<tr>
-                                        <th class="text-left">
-                                            <a href="/user/update" class="primary-btn">Update Profile</a>
-                                            <a href="/user/password" class="primary-btn">Change Password</a>
-
-                                        </th>
-
-
-                                        <td class="size: 25%"><img src="{{ profile.image.url }}" style="border-radius: 45px;height: auto"></td></tr>
-
-                                    <tr>
-
-										<th class="text-left">Name Surname</th>
-                                        <td class="text-left">{{profile.user_name}}</td>
-                                    </tr>
-                                    <tr>
-										<th class="text-left">Email</th>
-                                        <td class="text-left">{{profile.user.email}}</td>
-                                    </tr>
-                                    <tr>
-										<th class="text-left">Address</th>
-										<td class="text-left">{{profile.address}}</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="text-left">Phone</th>
-                                        <td class="text-left">{{profile.phone}}</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="text-left">Country</th>
-										<td class="text-left">{{profile.country}}</td>
-                                     </tr>
-                                    <tr>
-                                        <th class="text-left">City</th>
-										<td class="text-left">{{profile.city}}</td>
-									</tr>
-                                    <tr></tr>
-
-                            </table>
                     </div>
         </div> <!-- row -->
     </div><!--cont-->
