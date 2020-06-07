@@ -1,6 +1,7 @@
 import json
 
 from django.contrib.auth import logout, authenticate, login
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 
@@ -8,7 +9,7 @@ from django.shortcuts import render
 from django.contrib import messages
 
 from home.forms import SearchForm, SignUpForm
-from home.models import Setting, ContactFormMessage, ContactFormu
+from home.models import Setting, ContactFormMessage, ContactFormu, UserProfile
 from post.models import Post, Category, Comment, Images
 
 
@@ -19,6 +20,7 @@ def index(request):
     dayposts = Post.objects.all()[:4]
     lastposts = Post.objects.all().order_by('-id')[:4]
     randposts = Post.objects.all().order_by('?')[:4]
+    post=Post.objects.all()[:8]
 
     context = {'setting': setting,
                'category': category,
@@ -27,11 +29,13 @@ def index(request):
                'dayposts': dayposts,
                'lastposts': lastposts,
                'randposts': randposts,
+               'post': post,
                }
     return render(request, 'index.html', context)
 
 
 def about(request):
+
     setting = Setting.objects.get(pk=1)
     category = Category.objects.all()
     context = {'setting': setting, 'page': 'about',
@@ -70,11 +74,7 @@ def contact(request):
     return render(request, 'contact.html', context)
 
 
-def gallery(request):
-    category = Category.objects.all()
-    setting = Setting.objects.get(pk=1)
-    context = {'setting': setting, 'page': 'gallery', 'category': category}
-    return render(request, 'gallery.html', context)
+
 
 
 def blog(request):
@@ -174,21 +174,32 @@ def login_view(request):
                 'category': category, }
     return render(request, 'login.html', context)
 
+
 def signup_view(request):
     if request.method == 'POST':
         form=SignUpForm(request.POST)
         if form.is_valid():
             form.save()
-            username = request.POST['username']
-            password = request.POST['password1']
-            user = authenticate(request, username=username, password=password)
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=password)
             login(request,user)
+
+            current_user=request.user
+            data=UserProfile()
+            data.user_id=current_user.id
+            data.image="image/13.jpg"
+            data.save()
+            messages.success(request,"Succesfull! ")
+
         return HttpResponseRedirect('/')
+
     category = Category.objects.all()
-    form=SignUpForm()
+    form = SignUpForm()
     context = {
         'category': category,
         'form' : form,
     }
     return render(request, 'signup.html', context)
+
 

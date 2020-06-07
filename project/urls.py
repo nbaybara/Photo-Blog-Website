@@ -27,7 +27,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/', views.blog, name='blog'),
     path('ckeditor/', include('ckeditor_uploader.urls')),
-    path('gallery/', views.gallery, name='gallery'),
     path('contact/', views.contact, name='contact'),
     path('about/', views.about, name='about'),
     path('references/', views.references, name='references'),

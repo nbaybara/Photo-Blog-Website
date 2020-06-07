@@ -1,9 +1,15 @@
 {% extends "homebase.html"%}
-{% block title %}  {{ categorydata.title }} Posts {% endblock %}
+{% block title %} Gallery {{ setting.company.title }} {% endblock %}
 {% block keywords %} {{ setting.description }} {% endblock %}
 {% block description %} {{ setting.keyword }}{% endblock %}
 
-{% block head %} <link rel='shortcut icon' type='image/x-icon' href='{{ setting.icon.url }}' />{% endblock %}
+{% block head %} <link rel='shortcut icon' type='image/x-icon' href='{{ setting.icon.url }}' />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"> </script>
+<!-- jQuery UI !-->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+{% endblock %}
 {% load static %}
 {% block content %}
    <!-- Breadcrumb Area Start -->
@@ -16,7 +22,7 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb justify-content-center">
                                 <li class="breadcrumb-item"><a href="index.html"><i class="icon_house_alt"></i> Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page" -> Contact-> Gallery</li>
+                                <li class="breadcrumb-item active" aria-current="page">Gallery</li>
                             </ol>
                         </nav>
                     </div>
@@ -25,6 +31,7 @@
         </div>
     </section>
      <!-- Gallery Area Start -->
+     {% load mptt_tags %}
     <div class="alime-portfolio-area section-padding-80 clearfix">
         <div class="container-fluid">
             <div class="row">
@@ -32,39 +39,46 @@
                     <!-- Projects Menu -->
                     <div class="alime-projects-menu wow fadeInUp" data-wow-delay="100ms">
                         <div class="portfolio-menu text-center">
-                            <button class="btn active" data-filter="*">All</button >
-                            <button class="btn" data-filter=".human">Human</button>
-                            <button class="btn" data-filter=".nature">Nature</button>
-                            <button class="btn" data-filter=".country">Country</button>
-                            <button class="btn" data-filter=".video">Video</button>
+                            {% recursetree category %}
+                            <a href="/category/{{ node.id }}/{{ node.slug }}" class="btn active" data-filter="*">{{node.title}}</a>
+
+                            {% endrecursetree %}
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="row alime-portfolio">
-                <!-- Single Gallery Item -->
                 {% for rs in posts %}
-                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item nature mb-30 wow fadeInUp" data-wow-delay="100ms">
+                <!-- Single Gallery Item -->
+                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item country mb-30 wow fadeInUp" data-wow-delay="500ms">
                     <div class="single-portfolio-content">
-                        <img src="{{ rs.image.url }}" alt="">
-                        <a href="category/{{ rs.id }}/{{ rs.slug }}" class="portfolio-img">{{ rs.title }}</a>
+                        <img src="{{ rs.image.url }}" style="width: 380px;height: 380px;"alt="">
                         <div class="hover-content">
                             <a href="{{ rs.image.url }}" class="portfolio-img">+</a>
+                             <div class="post-content">
+
+                            <a href="#" class="post-title">Vietnam's largest art community</a>
                         </div>
+                        </div>
+
                     </div>
-
-
                 </div>
                 {% endfor %}
 
-        </div>
-    </div>
-    <div class="row">
+
+            </div>
+
+            <div class="row">
                 <div class="col-12 text-center wow fadeInUp" data-wow-delay="800ms">
                     <a href="#" class="btn alime-btn btn-2 mt-15">View More</a>
                 </div>
             </div>
+        </div>
     </div>
+    <!-- Gallery Area End -->
+
+    <!-- Breadcrumb Area End -->
 {% endblock %}
 
 

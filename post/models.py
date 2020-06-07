@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
-from django.forms import ModelForm
+from django.forms import ModelForm, forms
 from django.urls import reverse
 from django.utils.safestring import mark_safe
 from ckeditor_uploader.fields import RichTextUploadingField
@@ -38,6 +38,7 @@ class Category(MPTTModel):
         return  reverse('category_detail',kwargs={'slug':self.slug})
 
 
+
 class Post(models.Model):
     STATUS = (
         ('True', 'Evet'),
@@ -45,6 +46,7 @@ class Post(models.Model):
     )
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     title = models.CharField(max_length=150)
+    city=models.CharField(max_length=25,blank=True)
     keyword = models.CharField(max_length=255)
     description = models.CharField(max_length=255)
     image = models.ImageField(blank=True, upload_to="images/")
@@ -53,6 +55,8 @@ class Post(models.Model):
     create_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
     slug = models.SlugField(null=False, unique=True)
+    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    #useralanı
 
     def __str__(self):
         return self.title
@@ -88,7 +92,7 @@ class Images(models.Model):
     image_tag.short_description = 'Image' #bozulursa sil dene
 
 
-class  Comment(models.Model):
+class Comment(models.Model):
     STATUS = (
         ('New', 'Yeni'),
         ('True', 'Evet'),
@@ -112,3 +116,7 @@ class CommentForm(ModelForm):
     class Meta:
         model = Comment
         fields = ['subject', 'comment','rate' ]
+
+
+
+

@@ -6,7 +6,7 @@
 
 {% block head %} <link rel='shortcut icon' type='image/x-icon' href='{{ setting.icon.url }}' />
 
-{% endblock %}
+
 
 {% load static %}
     <link rel="stylesheet" href=" {% static 'contactTemplate/bootstrap.min.css' %}">
@@ -15,7 +15,7 @@
 	<link  rel="stylesheet" href="{% static 'contactTemplate/slick-theme.css' %}" />
 	<link  rel="stylesheet" href="{% static 'contactTemplate/nouislider.min.css'%}" />
 	<link rel="stylesheet" href="{% static 'contactTemplate/font-awesome.min.css' %}">
-
+{% endblock %}
 {% block content %}
        <!-- Breadcrumb Area Start -->
 
@@ -26,11 +26,11 @@
             <div class="row h-100 align-items-center">
                 <div class="col-12">
                     <div class="breadcrumb-content text-center">
-                        <h2 class="page-title"> Login</h2>
+                        <h2 class="page-title">Login</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb justify-content-center">
                                 <li class="breadcrumb-item"><a href="index.html"><i class="icon_house_alt"></i> Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Blog</li>
+                                <li class="breadcrumb-item active" aria-current="page">Login</li>
                             </ol>
                         </nav>
                     </div>
@@ -84,7 +84,6 @@
     </div> <!-- sect->
 
 
-    {% load static %}
 
 
 {% endblock %}

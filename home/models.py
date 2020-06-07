@@ -95,3 +95,26 @@ class UserProfileForm(ModelForm):
     class Meta:
         model = UserProfile
         fields= ['phone', 'address', 'city', 'country', 'image']
+
+
+class FAQ(models.Model):
+    STATUS = (
+        ('New', 'New'),
+        ('Read', 'Read'),
+        ('Closed', 'Closed'),
+    )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

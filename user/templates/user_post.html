@@ -1,0 +1,98 @@
+{% extends "homebase.html" %}
+{% block title %}  {{ categorydata.title }} Posts {% endblock %}
+{% block keywords %} {{ setting.description }} {% endblock %}
+{% block description %} {{ setting.keyword }}{% endblock %}
+
+{% block head %} <link rel='shortcut icon' type='image/x-icon' href='{{ setting.icon.url }}' />
+{% load static %}
+    <link rel="stylesheet" href=" {% static 'contactTemplate/bootstrap.min.css' %}">
+	<link  rel="stylesheet" href="{% static 'contactTemplate/slick.css' %}" />
+    <link  rel="stylesheet" href="{% static 'contactTemplate/style.css' %}" />
+	<link  rel="stylesheet" href="{% static 'contactTemplate/slick-theme.css' %}" />
+	<link  rel="stylesheet" href="{% static 'contactTemplate/nouislider.min.css'%}" />
+	<link rel="stylesheet" href="{% static 'contactTemplate/font-awesome.min.css' %}">{% endblock %}
+
+{% block content %}
+    {% load static %}  <section class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url({% static 'img/bg-img/38.jpg'%});">
+        <div class="container h-100">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="breadcrumb-content text-center">
+                        <h2 class="page-title">Profile</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item"><a href="index.html"><i class="icon_house_alt"></i>User</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Photo</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+   <br>
+    <br>
+
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    {% include "user_panel.html" %}
+                </div>
+                <div class="col-md-9">
+                    <div class="section-title">
+                        <h4 class="title">User Photo List</h4>
+                         <a href="/user/addpost" class="primary-btn">Add post</a>
+                    </div>
+                    <table class="shopping-cart-table table">
+                        <tr>
+                            <th class="text-left">Post</th>
+                            <th class="text-left">Category</th>
+                            <th class="text-left">Title</th>
+                            <th class="text-left">Status</th>
+                            <th class="text-left">Date</th>
+                            <th class="text-left">City</th>
+                            <th></th>
+                            <th class="text-left">Detail</th>
+
+                        </tr>
+                        {% for rs in post %}
+                            <tr>
+                            <td class="text-left"><img src="{{ rs.image.url }}" style="height: 50px;width: 50px;"></td>
+                            <td class="text-left">{{ rs.category}}</td>
+                            <td class="text-left">{{ rs.title}}</td>
+                            <td class="text-left">{{ rs.status}}</td>
+                            <td class="text-left">{{ rs.create_at}}</td>
+                            <td class="text-left">{{ rs.city}}</td>
+                                <td></td>
+                            <td class="text-left"><a class="primary-btn"
+                                 href="/user/editpost/{{ rs.id }}"
+                            ONCLICK="return confirm('Are you sure?')">EDİT</a> </td>
+                            <td class="text-left"><a class="primary-btn"
+                                 href="/user/deletepost/{{ rs.id }}"
+                            ONCLICK="return confirm('Will you delete? Be sure!')">DELETE</a> </td>
+                            </tr>
+                        {% endfor %}
+                    {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+     {% load static %}
+
+	<script src="{% static 'contactTemplate/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'contactTemplate/js/slick.min.js' %}"></script>
+	<script src="{% static 'contactTemplate/js/nouislider.min.js' %}"></script>
+	<script src="{% static 'contactTemplate/js/jquery.zoom.min.js' %}"></script>
+	<script src="{% static 'contactTemplate/js/main.js' %}"></script>
+
+{% endblock %}

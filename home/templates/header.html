@@ -32,48 +32,54 @@
                             <div class="classynav">
                              <ul id="nav">
                                  <!-- Search Icon -->
-                                    {% load mptt_tags %}
-                                    <li ><a href="#">Categories</a>
-                                        <ul class="dropdown ">
-                                        {% recursetree category %}
-                                              <li class="">
-                                                  <a href="/content/{{ node.id }}/{{ node.slug }}" class="dropdown-toggle"
-                                                          {% if not node.is_leaf_node %} data-toggle="list-link" aria-expanded="true" {% endif %}>
-                                                            {{ node.title }}
-                                                  </a>
-                                                           {% if not node.is_leaf_node %}
 
-                                                                 <ul class="dropdown">
-                                                                  <li><a href="#">{{ children }}</a></li>
-                                                                 </ul>
-
-                                                            {% endif %}
-
-                                              </li>
-                                            {% endrecursetree %}
-                                        </ul>
-                                    </li>
                                     <li class="active"><a href="/">Home</a></li>
                                     <li><a href="/about">About</a></li>
-                                    <li><a href="/gallery">Gallery</a></li>
                                     <li><a href="/contact">Contact</a></li>
+                                     <li><a href="#">Pages</a>
+                                        <ul class="dropdown">
+                                            <li><a href="/about">- About</a></li>
+                                            <li><a href="/blog">- Blog</a></li>
+                                            <li><a href="/references">- References</a></li>
+                                            <li><a href="/contact">- Contact</a></li>
+
+                                        </ul>
+                                     </li>
+                                    {% load mptt_tags %}
+                                        <li ><a href="#">Categories</a>
+                                            <ul class="dropdown ">
+                                            {% recursetree category %}
+                                                  <li class="">
+                                                      <a href="/category/{{ node.id }}/{{ node.slug }}" class="dropdown-toggle"
+                                                              {% if not node.is_leaf_node %} data-toggle="list-link" aria-expanded="true" {% endif %}>
+                                                                {{ node.title }}
+                                                      </a>
+                                                               {% if not node.is_leaf_node %}
+
+                                                                     <ul class="dropdown">
+                                                                      <li><a href="/categories/{{ node.id }}/{{ node.slug }}">{{ children }}</a></li>
+                                                                     </ul>
+
+                                                                {% endif %}
+
+                                                  </li>
+                                                {% endrecursetree %}
+                                            </ul>
+                                        </li>
 
                                 <!-- Account -->
                                     <li class="header-account dropdown default-dropdown">
                                         {% if user.id is not None %}
-                                        <div class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="true">
-                                            <div class="header-btns-icon" style="color: #fc6060;">
-                                                <i class="fa fa-user-o"></i>
-                                            </div>
-                                            <strong href="#" class="text-uppercase" style="color:white;">{{ user.first_name }} <i class="fa fa-caret-down"></i></strong>
+                                        <div class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="true" style="color: white">
+                                            <strong href="/user/" class="text-uppercase" style="color:white;">{{ user.first_name }} </strong>
                                         </div>
                                         {% else %}
                                         <a href="/login/" class="text-uppercase">Login</a><a href="/signup/" class="text-uppercase">Join</a>
                                         {% endif %}
                                         <ul class="dropdown">
 
-                                            <li><a href="#"><i class="fa fa-exchange"></i>My Gallery</a></li>
-                                            <li><a href="#"><i class="fa fa-check"></i> Checkout</a></li>>
+                                            <li><a href="/user"><i class="fa fa-user"></i>My profile</a></li>
+                                            <li><a href="/user/post"><i class="fa fa-user"></i>My Photo</a></li>
                                             <li><a href="/logout/"><i class="fa fa-unlock-alt"></i> Checkout</a></li>
                                         </ul>
                                     </li>

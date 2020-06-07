@@ -12,8 +12,7 @@ class SignUpForm(UserCreationForm):
     username = forms.CharField(max_length=30, label='User Name')
     email = forms.EmailField(max_length=30, label='Email', help_text='Required. Inform a valid email address.')
     first_name = forms.CharField(max_length=30, help_text='First Name', label='First Name :')
-    last_name = forms.CharField(max_length=30, help_text='First Name',  label='Last Name : ')
-
+    last_name = forms.CharField(max_length=30, help_text='Last Name',  label='Last Name : ')
 
     class Meta:
         model = User

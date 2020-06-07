@@ -9,23 +9,23 @@
 {% load static %}
 {% block content %}
     <!-- Breadcrumb Area Start -->
-    <section class="breadcrumb-area bg-img bg-overlay jarallax" style=" background-image: url({% static 'img/bg-img/38.jpg'%});">
-        <div class="container h-100">
+   {% load static %}
+    <section class="breadcrumb-area bg-img bg-overlay jarallax">
+        <img src={{ post.image.url }}>
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
                     <div class="breadcrumb-content text-center">
-                        <h2 class="page-title">Latest Blog</h2>
+                        <h2 class="page-title">Contact</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb justify-content-center">
                                 <li class="breadcrumb-item"><a href="index.html"><i class="icon_house_alt"></i> Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Blog</li>
+                                <li class="breadcrumb-item active" aria-current="page">Contact</li>
                             </ol>
                         </nav>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     </section>
     <!-- Breadcrumb Area End -->
