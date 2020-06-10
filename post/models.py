@@ -38,7 +38,6 @@ class Category(MPTTModel):
         return  reverse('category_detail',kwargs={'slug':self.slug})
 
 
-
 class Post(models.Model):
     STATUS = (
         ('True', 'Evet'),
@@ -46,7 +45,6 @@ class Post(models.Model):
     )
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     title = models.CharField(max_length=150)
-    city=models.CharField(max_length=25,blank=True)
     keyword = models.CharField(max_length=255)
     description = models.CharField(max_length=255)
     image = models.ImageField(blank=True, upload_to="images/")
@@ -73,6 +71,7 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return  reverse('post_detail',kwargs={'slug':self.slug})
+
 
 
 class Images(models.Model):
