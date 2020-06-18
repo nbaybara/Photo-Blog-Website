@@ -1,7 +1,4 @@
-{% extends "homebase.html"%}
-{% block title %}Contact  {{ setting.company.title }} {% endblock %}
-{% block keywords %} {{ setting.description }} {% endblock %}
-{% block description %} {{ setting.keyword }}{% endblock %}
+
 
 {% block head %} <link rel='shortcut icon' type='image/x-icon' href='{{ setting.icon.url }}' />
 
@@ -17,27 +14,27 @@
     <link rel="stylesheet" href="{% static 'contactTemplate/font-awesome.min.css' %}">
 
 
+
 {% endblock %}
-<body>
-{% include 'footer.html' %}
-    {% block foot %} {% endblock %}
-</body>
+
 
 
 {% block content %}
        <!-- Breadcrumb Area Start -->
     {% load static %}
-    <section class="breadcrumb-area bg-img bg-overlay jarallax">
-        <img src={{ post.image.url }}>
+  {% load static %}
+
+    <section class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url({% static 'img/bg-img/38.jpg'%}); height: 360px">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
                     <div class="breadcrumb-content text-center">
-                        <h2 class="page-title">Contact</h2>
+                        <br><br><br><br><br><br>
+                        <h2 class="page-title" style="color: white">Contact</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb justify-content-center">
-                                <li class="breadcrumb-item"><a href="index.html"><i class="icon_house_alt"></i> Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                                <li class="breadcrumb-item"><a href="/"style="color: white"><i class="icon_house_alt" ></i> Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page" style="color: white">Contact</li>
                             </ol>
                         </nav>
                     </div>
@@ -50,7 +47,7 @@
     <div id="breadcrumb">
 		<div class="container">
 			<ul class="breadcrumb">
-				<li><a href="#">Home</a></li>
+				<li><a href="/">Home</a></li>
 				<li class="active">Contact</li>
 			</ul>
 		</div>
@@ -99,12 +96,6 @@
 
 
     {% load static %}
-
-	<script src="{% static 'contactTemplate/js/bootstrap.min.js' %}"></script>
-	<script src="{% static 'contactTemplate/js/slick.min.js' %}"></script>
-	<script src="{% static 'contactTemplate/js/nouislider.min.js' %}"></script>
-	<script src="{% static 'contactTemplate/js/jquery.zoom.min.js' %}"></script>
-	<script src="{% static 'contactTemplate/js/main.js' %}"></script>
 {% endblock %}
 
 

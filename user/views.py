@@ -6,7 +6,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
 
 # Create your views here.
-from home.models import UserProfile, Setting
+from home.models import UserProfile, Setting, FAQ
 from post.models import Category, Post, Comment, Images
 from user.forms import UserUpdateForm, ProfileUpdateForm
 from user.models import PostForm, PostImageForm
@@ -177,5 +177,8 @@ def post(request):
                 'category': category,
                 }
     return render(request, 'user_post.html',context)
+
+
+
 
 

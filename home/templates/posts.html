@@ -53,16 +53,21 @@
                 <!-- Single Gallery Item -->
                 <div class="col-12 col-sm-6 col-lg-3 single_gallery_item country mb-30 wow fadeInUp" data-wow-delay="500ms">
                     <div class="single-portfolio-content">
-                        <img src="{{ rs.image.url }}" style="width: 380px;height: 380px;"alt="">
+
+                        <img src="{{ rs.image.url }}" style=""alt="">
+
                         <div class="hover-content">
                             <a href="{{ rs.image.url }}" class="portfolio-img">+</a>
                              <div class="post-content">
+                                                             <div class="hover-content">
+                            <a href="{{ rs.image.url }}" class="portfolio-img">+</a>
 
-                            <a href="#" class="post-title">Vietnam's largest art community</a>
+                             </div>
                         </div>
                         </div>
-
                     </div>
+                    <a href="/post/{{ rs.id }}/{{ rs.slug }}" class="btn post-catagory">{{ rs.category.title }}</a>
+
                 </div>
                 {% endfor %}
 

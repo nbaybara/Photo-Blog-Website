@@ -29,21 +29,15 @@
                 <div class="col-12 col-sm-6 col-lg-3 single_gallery_item human mb-30 wow fadeInUp" data-wow-delay="700ms">
                     <div class="single-portfolio-content">
                         <img src="{{ rs.image.url}}"  style="width: 380px;height: 380px;" alt="">
-                        <a href="#" class="btn post-catagory">{{ rs.category.title }}</a>
                         <div class="hover-content">
                             <a href="{{ rs.image.url }}" class="portfolio-img">+</a>
-
-                        </div>
+                             </div>
                     </div>
+                            <a href="/post/{{ rs.id }}/{{ rs.slug }}" class="btn post-catagory">{{ rs.category.title }}</a>
+
                 </div>
                 {% endfor %}
 
-            </div>
-
-            <div class="row">
-                <div class="col-12 text-center wow fadeInUp" data-wow-delay="700ms">
-                    <a href="#" class="btn alime-btn btn-2 mt-15">View More</a>
-                </div>
             </div>
         </div>
     </div>

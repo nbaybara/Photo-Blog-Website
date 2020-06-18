@@ -9,12 +9,12 @@
 {% block content %}
      {% load static %}
     <section class="breadcrumb-area bg-img bg-overlay jarallax">
-        <img src={{ post.image.url }}>
+        <img src={{ post.image.url}}>
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
                     <div class="breadcrumb-content text-center">
-                        <h2 class="page-title">Contact</h2>
+                        <h2 class="page-title">Search</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb justify-content-center">
                                 <li class="breadcrumb-item"><a href="index.html"><i class="icon_house_alt"></i> Home</a></li>
@@ -35,12 +35,14 @@
                     <tr>
                         <th>Image</th>
                          <th>Post Name</th>
+                         <th>Category</th>
                         <th>Description</th>
                     </tr>
                     {% for rs in post %}
                         <tr>
-                        <td><a href="/post/{{ rs.id }}/{{ rs.slug }}" style="" alt=""><img src="{{ rs.image.url }}"></a> </td>
+                        <td><a href="/post/{{ rs.id }}/{{ rs.slug }}" style="" alt=""><img src="{{ rs.image.url }} " style="width:45px;height: 45px "></a> </td>
                          <td><a href="/post/{{ rs.id }}/{{ rs.slug }}" style="" alt="">{{ rs.title }}</a> </td>
+                            <td><a href="/post/{{ rs.id }}/{{ rs.slug }}" style="" alt="">{{ rs.category }}</a> </td>
                         <td><a href="/category/{{ rs.category.id }}/{{ rs.category.slug }}" style="" alt="">{{ rs.category }}</a> </td>
 
                         </tr>

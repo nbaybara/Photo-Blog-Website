@@ -4,8 +4,8 @@ from django.contrib.auth.models import User
 
 
 class SearchForm(forms.Form):
-    query = forms.CharField(label='Search',max_length=100)
-    catid = forms.IntegerField()
+    query = forms.CharField(label='Search',max_length=25)
+
 
 class SignUpForm(UserCreationForm):
 

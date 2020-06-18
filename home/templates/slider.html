@@ -4,7 +4,7 @@
         <div class="welcome-slides owl-carousel">
             <!-- Single Slide -->
             {% for rs in sliderdata %}
-            <div class="single-welcome-slide bg-img bg-overlay"style="background: url({{rs.image.url}}) ;background-size: 100%;" >
+            <div class="single-welcome-slide bg-img bg-overlay" style="background: url({{rs.image.url}}) ;background-size: 100%;" >
                 <div class="container h-100">
                     <div class="row h-100 align-items-center"><!-- Welcome Text -->
                         <div class="col-12 col-lg-8 col-xl-6">
@@ -12,7 +12,8 @@
                                 <h2 data-animation="bounceInDown" data-delay="900ms">{{ rs.title }}</h2>
                                 <div class="hero-btn-group" data-animation="bounceInDown" data-delay="500ms">
                                   <a class="hero-mail-contact" href="mailto:hello.alime@gmail.com">hello.alime@gmail.com</a>
-                                  <a href="/post/{{ rs.id }}/{{ rs.slug }}" class="primary-btn">Look at</a>
+                                    <br>
+                                  <a href="/post/{{ rs.id }}/{{ rs.slug }}" class="button" style="font-size: medium ; color: white">Look at</a>
                                 </div>
                             </div>
                         </div>

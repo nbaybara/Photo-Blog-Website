@@ -33,6 +33,7 @@ urlpatterns = [
     path('search/', views.post_search, name='post_search'),
     path('logout/', views.logout_view, name='logout_view'),
     path('login/', views.login_view, name='login_view'),
+    path('faq/', views.faq, name='faq'),
     path('signup/', views.signup_view, name='signup_view'),
     path('category/<int:id>/<slug:slug>/', views.category_posts, name='category_posts'),
     path('post/<int:id>/<slug:slug>/', views.post_detail, name='post_detail'),

@@ -1,0 +1,65 @@
+{% extends "homebase.html" %}
+{% block title %}  Frequently Asked Question {% endblock %}
+
+{% block head %} <link rel='shortcut icon' type='image/x-icon' href='{{ setting.icon.url }}' />
+{% load static %}
+    <link rel="stylesheet" href=" {% static 'contactTemplate/bootstrap.min.css' %}">
+	<link  rel="stylesheet" href="{% static 'contactTemplate/slick.css' %}" />
+    <link  rel="stylesheet" href="{% static 'contactTemplate/style.css' %}" />
+	<link  rel="stylesheet" href="{% static 'contactTemplate/slick-theme.css' %}" />
+	<link  rel="stylesheet" href="{% static 'contactTemplate/nouislider.min.css'%}" />
+	<link rel="stylesheet" href="{% static 'contactTemplate/font-awesome.min.css' %}">
+
+    <script>
+      $( function() {
+        $( "#accordion" ).accordion();
+      } );
+      </script>
+{% endblock %}
+
+{% block content %}
+  <section class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url({% static 'img/bg-img/38.jpg'%});">
+        <div class="container h-100">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="breadcrumb-content text-center">
+                        <h2 class="page-title">Frequently Asked Question</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item"><a href="index.html"><i class="icon_house_alt"></i> Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Frequently Asked Question</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <div class="section">
+        <div class="container">
+            <div class="row">
+            <div id="accordion">
+                {%  for rs in faq %}
+                <h3>{{ rs.question }}</h3>
+                  <div>
+                    <p>
+                    {{ rs.answer }}
+                    </p>
+
+                  </div>
+            {% endfor %}</div>
+            </div>
+        </div>
+    </div>
+     {% load static %}
+
+	<script src="{% static 'contactTemplate/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'contactTemplate/js/slick.min.js' %}"></script>
+	<script src="{% static 'contactTemplate/js/nouislider.min.js' %}"></script>
+	<script src="{% static 'contactTemplate/js/jquery.zoom.min.js' %}"></script>
+	<script src="{% static 'contactTemplate/js/main.js' %}"></script>
+
+{% endblock %}
