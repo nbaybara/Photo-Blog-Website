@@ -16,7 +16,6 @@
                             <ul>
                              {% recursetree category %}
                             <button class="btn active" data-filter="*" onclick=location.href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</button>
-
                             {% endrecursetree %}
                             </ul>
                         </div>
@@ -28,12 +27,12 @@
                 {% for rs in post %}
                 <div class="col-12 col-sm-6 col-lg-3 single_gallery_item human mb-30 wow fadeInUp" data-wow-delay="700ms">
                     <div class="single-portfolio-content">
-                        <img src="{{ rs.image.url}}"  style="width: 380px;height: 380px;" alt="">
+                        <img src="{{ rs.image.url}}"  style="width: 300px;height: 300px;" alt="">
                         <div class="hover-content">
                             <a href="{{ rs.image.url }}" class="portfolio-img">+</a>
                              </div>
                     </div>
-                            <a href="/post/{{ rs.id }}/{{ rs.slug }}" class="btn post-catagory">{{ rs.category.title }}</a>
+                            <a href="/post/{{ rs.id }}/{{ rs.slug }}" class="btn post-catagory">{{ rs.title}}</a>
 
                 </div>
                 {% endfor %}

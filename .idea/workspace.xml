@@ -2,22 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b6edde5e-d507-4c77-acae-c23a065727de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/home/templates/faq.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/contact.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/homebase.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/homebase.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/post_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/post_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/post_search.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/post_search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/posts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/references.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/references.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/sidebar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/slider.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/slider.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user_comments.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_comments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -260,7 +256,8 @@
       <workItem from="1591819460296" duration="8631000" />
       <workItem from="1591897219692" duration="8813000" />
       <workItem from="1591994023205" duration="1825000" />
-      <workItem from="1592515031655" duration="4946000" />
+      <workItem from="1592515031655" duration="13033000" />
+      <workItem from="1592667347086" duration="596000" />
     </task>
     <task id="LOCAL-00001" summary="Video6">
       <created>1585774996637</created>
@@ -367,7 +364,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591821020243</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Son detaylar">
+      <created>1592524198857</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1592524198857</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,7 +401,8 @@
     <MESSAGE value="Üye paneli oluşturuldu, category düzeltildi" />
     <MESSAGE value="update/change password" />
     <MESSAGE value="admin içerik ekleme/yorum silme..." />
-    <option name="LAST_COMMIT_MESSAGE" value="admin içerik ekleme/yorum silme..." />
+    <MESSAGE value="Son detaylar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Son detaylar" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="25" key="#Deployment" timestamp="1589885714092">
@@ -416,10 +421,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="465" y="174" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1589053449436" />
-    <state x="521" y="0" key="CommitChangelistDialog2" timestamp="1591821017098">
+    <state x="521" y="0" key="CommitChangelistDialog2" timestamp="1592524192314">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="521" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1591821017098" />
+    <state x="521" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1592524192314" />
     <state x="92" y="92" width="1182" height="544" maximized="true" key="DiffContextDialog" timestamp="1589885904963">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

@@ -16,11 +16,11 @@ from post.models import Post, Category, Comment, Images
 def index(request):
     setting = Setting.objects.get(pk=1)
     category = Category.objects.all()
-    sliderdata = Post.objects.all()[:4]
+    sliderdata = Post.objects.all()[:6]
     dayposts = Post.objects.all()[:4]
     lastposts = Post.objects.all().order_by('-id')[:4]
     randposts = Post.objects.all().order_by('?')[:4]
-    post = Post.objects.all()[:8]
+    post = Post.objects.all()[:20]
 
     context = {'setting': setting,
                'category': category,

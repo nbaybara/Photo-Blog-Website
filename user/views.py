@@ -86,12 +86,11 @@ def addpost(request):
             data.category_id = catid.id
             data.title = form.cleaned_data['title']
             data.keyword = form.cleaned_data['keyword']
-            data.city = form.cleaned_data['city']
             data.description = form.cleaned_data['description']
             data.image = form.cleaned_data['image']
             data.detail = form.cleaned_data['detail']
             data.slug = form.cleaned_data['slug']
-            data.status = 'True'
+            data.status = 'New'
             data.user_id = current_user.id
             data.save()
             messages.success(request, "Photo successfully added.")
@@ -147,7 +146,6 @@ def imageaddpost(request, id):
         form = PostImageForm(request.POST, request.FILES)
         if form.is_valid():
             data = Images()
-            data.city = form.cleaned_data['city']
             data.title = form.cleaned_data['title']
             data.post_id = id
             data.image = form.cleaned_data['image']
