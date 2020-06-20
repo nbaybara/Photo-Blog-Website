@@ -1,4 +1,3 @@
-# Django
-Django Website
-You should install Django framework
+Fotoğraf ekleme değerlendirme
 To run-> python manage.py runserver :)
+
