@@ -2,116 +2,121 @@
 <!-- Header Area Start -->
 <script>
 
-  $(function() {
-    $("#query").autocomplete({
-      source: "/search_auto/",
-      select: function (event, ui) { //item selected
-        AutoCompleteSelectHandler(event, ui)
-      },
-      minLength: 2,
+    $(function () {
+        $("#query").autocomplete({
+            source: "/search_auto/",
+            select: function (event, ui) { //item selected
+                AutoCompleteSelectHandler(event, ui)
+            },
+            minLength: 2,
+        });
     });
-  });
 
-  function AutoCompleteSelectHandler(event, ui)
-  {
-    var selectedObj = ui.item;
-  }
+    function AutoCompleteSelectHandler(event, ui) {
+        var selectedObj = ui.item;
+    }
 
 </script>
 
-    <header class="header-area">
-        <!-- Main Header Start -->
-        <div class="main-header-area">
-            <div class="classy-nav-container breakpoint-off">
-                <div class="container">
-                    <!-- Classy Menu -->
-                    <nav class="classy-navbar justify-content-between" id="alimeNav">
+<header class="header-area">
+    <!-- Main Header Start -->
+    <div class="main-header-area">
+        <div class="classy-nav-container breakpoint-off">
+            <div class="container">
+                <!-- Classy Menu -->
+                <nav class="classy-navbar justify-content-between" id="alimeNav">
 
-                        <!-- Logo -->
-                        <a class="nav-brand" href="/"><img src="{% static 'img/core-img/logo.png'%}" alt=""></a>
+                    <!-- Logo -->
+                    <a class="nav-brand" href="/"><img src="{% static 'img/core-img/logo.png' %}" alt=""></a>
 
-                        <!-- Navbar Toggler -->
-                        <div class="classy-navbar-toggler">
-                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+
+                    <!-- Menu -->
+                    <div class="classy-menu">
+                        <!-- Menu Close Button -->
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
                         </div>
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <ul id="nav">
+                                <!-- Search Icon -->
 
-                        <!-- Menu -->
-                        <div class="classy-menu">
-                            <!-- Menu Close Button -->
-                            <div class="classycloseIcon">
-                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-                            </div>
-                            <!-- Nav Start -->
-                            <div class="classynav">
-                             <ul id="nav">
-                                 <!-- Search Icon -->
+                                <li class="active"><a href="/">Home</a></li>
+                                <li><a href="/about">About</a></li>
+                                <li><a href="/contact">Contact</a></li>
+                                <li><a href="#">Pages</a>
+                                    <ul class="dropdown">
+                                        <li><a href="/about">- About</a></li>
+                                        <li><a href="/references">- References</a></li>
+                                        <li><a href="/contact">- Contact</a></li>
+                                        <li><a href="/faq">- FAQ</a></li>
 
-                                    <li class="active"><a href="/">Home</a></li>
-                                    <li><a href="/about">About</a></li>
-                                    <li><a href="/contact">Contact</a></li>
-                                     <li><a href="#">Pages</a>
-                                        <ul class="dropdown">
-                                            <li><a href="/about">- About</a></li>
-                                            <li><a href="/references">- References</a></li>
-                                            <li><a href="/contact">- Contact</a></li>
-                                            <li><a href="/faq">- FAQ</a></li>
+                                    </ul>
+                                </li>
+                                {% load mptt_tags %}
+                                <li><a href="#">Categories</a>
+                                    <ul class="dropdown ">
+                                        {% recursetree category %}
+                                            <li class="">
+                                                <a href="/category/{{ node.id }}/{{ node.slug }}"
+                                                   class="dropdown-toggle"
+                                                        {% if not node.is_leaf_node %} data-toggle="list-link"
+                                                   aria-expanded="true" {% endif %}>
+                                                    {{ node.title }}
+                                                </a>
+                                                {% if not node.is_leaf_node %}
 
-                                        </ul>
-                                     </li>
-                                    {% load mptt_tags %}
-                                        <li ><a href="#">Categories</a>
-                                            <ul class="dropdown ">
-                                            {% recursetree category %}
-                                                  <li class="">
-                                                      <a href="/category/{{ node.id }}/{{ node.slug }}" class="dropdown-toggle"
-                                                              {% if not node.is_leaf_node %} data-toggle="list-link" aria-expanded="true" {% endif %}>
-                                                                {{ node.title }}
-                                                      </a>
-                                                               {% if not node.is_leaf_node %}
+                                                    <ul class="dropdown">
+                                                        <li>
+                                                            <a href="/category/{{ node.id }}/{{ node.slug }}">{{ children }}</a>
+                                                        </li>
+                                                    </ul>
 
-                                                                     <ul class="dropdown">
-                                                                      <li><a href="/category/{{ node.id }}/{{ node.slug }}">{{ children }}</a></li>
-                                                                     </ul>
+                                                {% endif %}
 
-                                                                {% endif %}
-
-                                                  </li>
-                                                {% endrecursetree %}
-                                            </ul>
-                                        </li>
+                                            </li>
+                                        {% endrecursetree %}
+                                    </ul>
+                                </li>
 
                                 <!-- Account -->
-                                    <li class="header-account dropdown default-dropdown">
-                                        {% if user.id is not None %}
-                                        <div class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="true" style="color: white">
-                                            <strong href="/user/" class="text-uppercase" style="color:white;">{{ user.first_name }} </strong>
+                                <li class="header-account dropdown default-dropdown">
+                                    {% if user.id is not None %}
+                                        <div class="dropdown-toggle" role="button" data-toggle="dropdown"
+                                             aria-expanded="true" style="color: white">
+                                            <strong href="/user/" class="text-uppercase"
+                                                    style="color:white;">{{ user.first_name }} </strong>
                                         </div>
-                                        {% else %}
-                                        <a href="/login/" class="text-uppercase">Login</a><a href="/signup/" class="text-uppercase">Join</a>
-                                        {% endif %}
-                                        <ul class="dropdown">
+                                    {% else %}
+                                        <a href="/login/" class="text-uppercase">Login</a>
+                                        <a href="/signup/" class="text-uppercase">Join</a>
+                                    {% endif %}
+                                    <ul class="dropdown">
+                                        <li><a href="/user"><i class="fa fa-user"></i>My profile</a></li>
+                                        <li><a href="/user/post"><i class="fa fa-user"></i>My Photo</a></li>
+                                        <li><a href="/logout/"><i class="fa fa-unlock-alt"></i> Checkout</a></li>
+                                    </ul>
+                                </li>
+                                <li>
 
-                                            <li><a href="/user"><i class="fa fa-user"></i>My profile</a></li>
-                                            <li><a href="/user/post"><i class="fa fa-user"></i>My Photo</a></li>
-                                            <li><a href="/logout/"><i class="fa fa-unlock-alt"></i> Checkout</a></li>
-                                        </ul>
-                                    </li>
-                             <li>
+                                    <!-- /Account -->
+                                    <form action="/search/" method="post">
+                                        {% csrf_token %}
+                                        <input name="query" type="text" class="input search-input" placeholder="Search">
+                                        <button class="search-btn"><i class="fa fa-search"></i></button>
 
-							<!-- /Account -->
-                                <form action="/search/" method="post">
-                                    {% csrf_token %}
-                                    <input  name="query" type="text" class="input search-input" placeholder="Search">
-                                     <button class="search-btn"><i class="fa fa-search" ></i> </button>
-
-                                </form>
-                             </li>
-                             </ul>
-                            </div>
-                            <!-- Nav End -->
+                                    </form>
+                                </li>
+                            </ul>
                         </div>
-                    </nav>
-                </div>
+                        <!-- Nav End -->
+                    </div>
+                </nav>
             </div>
         </div>
-    </header>
+    </div>
+</header>
