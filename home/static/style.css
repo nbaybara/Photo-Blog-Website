@@ -160,6 +160,7 @@ button.mfp-arrow {
 
 .bg-gray {
   background-color: #f7f7f7 !important; }
+
 textarea:focus,
 input:focus {
   outline: none; }
@@ -471,7 +472,7 @@ input:required {
   .header-area .search-icon {
     position: relative;
     z-index: 1;
-    margin-left: 50px; }
+    margin-left: 80px; }
     .header-area .search-icon i {
       font-size: 18px;
       color: #ffffff;
@@ -535,7 +536,7 @@ input:required {
     padding: 0; }
     @media only screen and (max-width: 767px) {
       .classy-nav-container .classy-navbar .nav-brand {
-        max-width: 100px;
+        max-width: 90px;
         margin-right: 15px; } }
     .classy-nav-container .classy-navbar .classynav ul li a {
       font-size: 16px;
@@ -986,6 +987,67 @@ input:required {
       color: #ffffff;
       font-family: "FontAwesome"; }
 
+.breadcrumb-area.blog {
+  height: 550px; }
+  .breadcrumb-area.blog .breadcrumb-content .post-catagory {
+    padding: 2px 15px;
+    border-radius: 2px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #fc6060;
+    font-weight: 500;
+    margin-bottom: 15px; }
+    .breadcrumb-area.blog .breadcrumb-content .post-catagory:hover, .breadcrumb-area.blog .breadcrumb-content .post-catagory:focus {
+      font-weight: 500;
+      background-color: #000000; }
+  .breadcrumb-area.blog .breadcrumb-content .page-title {
+    display: block;
+    font-size: 48px;
+    margin-bottom: 20px; }
+    @media only screen and (max-width: 767px) {
+      .breadcrumb-area.blog .breadcrumb-content .page-title {
+        font-size: 30px; } }
+  .breadcrumb-area.blog .breadcrumb-content .post-meta {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 5px; }
+    .breadcrumb-area.blog .breadcrumb-content .post-meta a {
+      position: relative;
+      z-index: 1;
+      font-size: 16px;
+      color: #ffffff;
+      font-weight: 500;
+      margin-right: 21px; }
+      @media only screen and (max-width: 767px) {
+        .breadcrumb-area.blog .breadcrumb-content .post-meta a {
+          font-size: 13px; } }
+      .breadcrumb-area.blog .breadcrumb-content .post-meta a::after {
+        content: '|';
+        position: absolute;
+        top: 0;
+        right: -11px;
+        z-index: 1; }
+      .breadcrumb-area.blog .breadcrumb-content .post-meta a:last-child::after {
+        display: none; }
+      .breadcrumb-area.blog .breadcrumb-content .post-meta a:hover, .breadcrumb-area.blog .breadcrumb-content .post-meta a:focus {
+        color: #fc6060; }
+        .breadcrumb-area.blog .breadcrumb-content .post-meta a:hover::after, .breadcrumb-area.blog .breadcrumb-content .post-meta a:focus::after {
+          color: #ffffff; }
+
+/* :: 13.0 Blog CSS */
+.blog-details-text {
+  position: relative;
+  z-index: 1; }
+  .blog-details-text .row {
+    margin-right: -5px;
+    margin-left: -5px; }
+    .blog-details-text .row .col-12 {
+      padding-right: 5px;
+      padding-left: 5px; }
+  .blog-details-text p {
+    font-size: 18px;
+    margin-bottom: 20px; }
 
 .alime-blockquote {
   position: relative;
@@ -1263,7 +1325,15 @@ input:required {
         .comment_area .children .single_comment_area .comment-author {
           margin-right: 10px; } }
 
-
+.alime-blog-area {
+  position: relative;
+  z-index: 1; }
+  .alime-blog-area .row {
+    margin-right: -5px;
+    margin-left: -5px; }
+    .alime-blog-area .row .col-12 {
+      padding-right: 5px;
+      padding-left: 5px; }
 
 .single-post-area {
   position: relative;
@@ -1575,131 +1645,4 @@ input:required {
     border: none !important;
     border-radius: 10px; }
 
-  .header-account.dropdown .custom-menu>li>a>i {
-  margin-right: 15px;
-  color: #F8694A;
-}
-   .dropdown.default-dropdown>.custom-menu {
-    border-top: 2px solid #F8694A;
-    left: 50%;
-    -webkit-transform: translateX(-50%) translateY(15px);
-    -ms-transform: translateX(-50%) translateY(15px);
-    transform: translateX(-50%) translateY(15px);
-  }
-
-.dropdown.default-dropdown.open>.custom-menu {
-  -webkit-transform: translateX(-50%) translateY(0px);
-  -ms-transform: translateX(-50%) translateY(0px);
-  transform: translateX(-50%) translateY(0px);
-}
-
-.dropdown.default-dropdown>.custom-menu>li>a {
-  display: block;
-  padding: 10px 0px;
-  text-transform: uppercase;
-}
-.header-btns>li .header-btns-icon {
-  position: relative;
-  float: left;
-  margin-right: 15px;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  color: #30323A;
-  background-color: #FFF;
-  border: 1px solid #DADADA;
-}
-.header-btns .dropdown-toggle {
-  display: block;
-  cursor: pointer;
-}
-
-.header-account.dropdown .custom-menu>li>a>i {
-  margin-right: 15px;
-  color: #F8694A;
-}
-.header-btns>li {
-  display: inline-block;
-  vertical-align: top;
-  padding: 15px 0px;
-}
-
-.header-btns>li+li {
-  margin-left: 15px;
-}
-.dropdown.open>.custom-menu {
-  opacity: 1;
-  visibility: visible;
-}
-
-.header-btns>li .header-btns-icon {
-  position: relative;
-  float: left;
-  margin-right: 15px;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  color: #30323A;
-  background-color: #FFF;
-  border: 1px solid #DADADA;
-}
-.category-nav .category-list>li.dropdown>.dropdown-toggle>i {
-  float: right;
-  line-height: 20px;
-}
-
-.header-btns .dropdown-toggle {
-  display: block;
-  cursor: pointer;
-}
-
-.header-account.dropdown .custom-menu>li>a>i {
-  margin-right: 15px;
-  color: #F8694A;
-}
 /*# sourceMappingURL=style.css.map */
-
-.dropdown.mega-dropdown.full-width {
-  position: static !important;
-}
-
-.dropdown.mega-dropdown>.custom-menu {
-  border-top: 2px solid #F8694A;
-  left: 0;
-  -webkit-transform: translate(0px, 15px);
-  -ms-transform: translate(0px, 15px);
-  transform: translate(0px, 15px);
-  width: auto;
-  min-width: 750px;
-  max-width: 100%;
-}
-
-.dropdown.mega-dropdown.full-width>.custom-menu {
-  width: 100%;
-}
-
-.dropdown.mega-dropdown.open>.custom-menu {
-  -webkit-transform: translate(0px, 0px);
-  -ms-transform: translate(0px, 0px);
-  transform: translate(0px, 0px);
-}
-
-/*-- Side Dropdown --*/
-
-.dropdown.side-dropdown>.custom-menu {
-  border-left: 2px solid #F8694A;
-  left: 100%;
-  top: 0;
-  width: 750px;
-  -webkit-transform: translate(15px, 0px);
-  -ms-transform: translate(15px, 0px);
-  transform: translate(15px, 0px);
-}
-
-.dropdown.side-dropdown.open>.custom-menu {
-  -webkit-transform: translate(0px, 0px);
-  -ms-transform: translate(0px, 0px);
-  transform: translate(0px, 0px);
-}

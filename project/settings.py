@@ -22,10 +22,9 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = 'tgpsm%7p0f5a2q_mi!7d7@16k$6n_to5dvuh@my)y@82u5!no@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+
 DEBUG = True
-
 ALLOWED_HOSTS = []
-
 # Application definition
 
 INSTALLED_APPS = [

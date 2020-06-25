@@ -1,8 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b6edde5e-d507-4c77-acae-c23a065727de" name="Default Changelist" comment="">
+    <list default="true" id="b6edde5e-d507-4c77-acae-c23a065727de" name="Default Changelist" comment="Done.">
+      <change afterPath="$PROJECT_DIR$/home/static/contactTemplate/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/static/contactTemplate/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/static/contactTemplate/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/static/contactTemplate/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/static/contactTemplate/js/jquery.zoom.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/static/contactTemplate/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/static/contactTemplate/js/nouislider.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/static/contactTemplate/js/slick.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/static/contactTemplate/nouislider.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/static/contactTemplate/slick-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/static/contactTemplate/slick.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/static/contactTemplate/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/static/css/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/static/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/static/css/default-assets/classy-nav.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/static/css/default-assets/themify-icons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/static/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/static/css/magnific-popup.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/static/css/owl.carousel.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/static/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/static/style.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,20 +88,20 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/home/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/home/static" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nsbay\Django\project\home\static\contactTemplate" />
+      <recent name="C:\Users\nsbay\Django\project\user\templates" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\nsbay\Django\project\home\static" />
+      <recent name="C:\Users\nsbay\Django\project\home\static\contactTemplate" />
       <recent name="C:\Users\nsbay\Django\project\home\templates" />
       <recent name="C:\Users\nsbay\Django\project\user\templates" />
       <recent name="C:\Users\nsbay\Django\project\user" />
-      <recent name="C:\Users\nsbay\Django\project\home" />
-      <recent name="C:\Users\nsbay\Django\project\home\static" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\nsbay\Django\project\user\templates" />
-      <recent name="C:\Users\nsbay\Django\project\home\static\contactTemplate" />
     </key>
   </component>
   <component name="RunManager" selected="Django server.project">
@@ -248,7 +272,9 @@
       <workItem from="1592667347086" duration="5614000" />
       <workItem from="1592861040878" duration="831000" />
       <workItem from="1593007581545" duration="1114000" />
-      <workItem from="1593008726993" duration="1595000" />
+      <workItem from="1593008726993" duration="10915000" />
+      <workItem from="1593038187886" duration="1082000" />
+      <workItem from="1593114819543" duration="1936000" />
     </task>
     <task id="LOCAL-00001" summary="Video6">
       <created>1585774996637</created>
@@ -376,7 +402,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593010248607</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Done.">
+      <created>1593010345148</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1593010345148</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -431,10 +464,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="83" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1592678897230" />
-    <state x="521" y="0" key="CommitChangelistDialog2" timestamp="1593010245146">
+    <state x="521" y="0" key="CommitChangelistDialog2" timestamp="1593026553153">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="521" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1593010245146" />
+    <state x="521" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1593026553153" />
     <state x="92" y="92" width="1182" height="544" maximized="true" key="DiffContextDialog" timestamp="1589885904963">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -443,22 +476,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="122" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1593009257664" />
-    <state width="1323" height="2" key="GridCell.Tab.0.bottom" timestamp="1593009407863">
+    <state width="1323" height="2" key="GridCell.Tab.0.bottom" timestamp="1593032042732">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="2" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1593009407863" />
-    <state width="1323" height="2" key="GridCell.Tab.0.center" timestamp="1593009407863">
+    <state width="1323" height="2" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1593032042732" />
+    <state width="1323" height="2" key="GridCell.Tab.0.center" timestamp="1593032042732">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="2" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1593009407863" />
-    <state width="1323" height="2" key="GridCell.Tab.0.left" timestamp="1593009407863">
+    <state width="1323" height="2" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1593032042732" />
+    <state width="1323" height="2" key="GridCell.Tab.0.left" timestamp="1593032042732">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="2" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1593009407863" />
-    <state width="1323" height="2" key="GridCell.Tab.0.right" timestamp="1593009407863">
+    <state width="1323" height="2" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1593032042732" />
+    <state width="1323" height="2" key="GridCell.Tab.0.right" timestamp="1593032042732">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="2" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1593009407863" />
+    <state width="1323" height="2" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1593032042732" />
     <state width="1323" height="217" key="GridCell.Tab.1.bottom" timestamp="1590441131025">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -491,14 +524,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1592678555595" />
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1593024889598">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1593024889598" />
     <state x="485" y="166" key="com.intellij.ide.util.TipDialog" timestamp="1586302231438">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="485" y="166" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586302231438" />
-    <state x="494" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588549799517">
+    <state x="494" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593024591100">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="494" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1588549799517" />
+    <state x="494" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1593024591100" />
     <state x="247" y="103" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1590326034215">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
