@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/dev/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/dev/ref/settings/
 """
+import django_heroku
 import os
 from pathlib import Path
 
