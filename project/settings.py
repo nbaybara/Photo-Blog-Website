@@ -141,5 +141,5 @@ CKEDITOR_CONFIGS = {
         'toolbar': None,
     },
 }
-
+django_heroku.settings(locals())
 ###################################
